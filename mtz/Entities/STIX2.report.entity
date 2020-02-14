@@ -1,0 +1,29 @@
+<MaltegoEntity id="STIX2.report" displayName="Report" displayNamePlural="Report" description="Reports are collections of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique, including context and related details." category="STIX 2" smallIconResource="stix2_report" largeIconResource="stix2_report" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="name" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `report`.">
+            <DefaultValue>report</DefaultValue>
+            <SampleValue>report</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent this object."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="created_by_ref" type="string" nullable="true" hidden="false" readonly="false" description="The ID of the Source object that describes who created this object."/>
+         <Field name="labels" type="string[]" nullable="true" hidden="false" readonly="false" description="The labels property specifies a set of terms used to describe this object."/>
+         <Field name="created" type="string" nullable="true" hidden="false" readonly="false" description="The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="modified" type="string" nullable="true" hidden="false" readonly="false" description="The modified property represents the time that this particular version of the object was modified. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="revoked" type="string" nullable="true" hidden="false" readonly="false" description="The revoked property indicates whether the object has been revoked."/>
+         <Field name="confidence" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the confidence that the creator has in the correctness of their data."/>
+         <Field name="lang" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the language of the text content in this object."/>
+         <Field name="external_references" type="string[]" nullable="true" hidden="false" readonly="false" description="A list of external references which refers to non-STIX information."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="report_types" type="string[]" nullable="true" hidden="false" readonly="false" description="This field is an Open Vocabulary that specifies the primary subject of this report. The suggested values for this field are in report-type-ov."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="The name used to identify the Report."/>
+         <Field name="description" type="string" nullable="true" hidden="false" readonly="false" description="A description that provides more details and context about Report."/>
+         <Field name="published" type="string" nullable="true" hidden="false" readonly="false" description="The date that this report object was officially published by the creator of this report."/>
+         <Field name="object_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="Specifies the STIX Objects that are referred to by this Report."/>
+
+      </Fields>
+   </Properties>
+</MaltegoEntity>

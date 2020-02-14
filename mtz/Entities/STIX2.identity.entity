@@ -1,0 +1,30 @@
+<MaltegoEntity id="STIX2.identity" displayName="Identity" displayNamePlural="Identity" description="Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups." category="STIX 2" smallIconResource="stix2_identity" largeIconResource="stix2_identity" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="name" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `identity`.">
+            <DefaultValue>identity</DefaultValue>
+            <SampleValue>identity</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent this object."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="created_by_ref" type="string" nullable="true" hidden="false" readonly="false" description="The ID of the Source object that describes who created this object."/>
+         <Field name="labels" type="string[]" nullable="true" hidden="false" readonly="false" description="The labels property specifies a set of terms used to describe this object."/>
+         <Field name="created" type="string" nullable="true" hidden="false" readonly="false" description="The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="modified" type="string" nullable="true" hidden="false" readonly="false" description="The modified property represents the time that this particular version of the object was modified. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="revoked" type="string" nullable="true" hidden="false" readonly="false" description="The revoked property indicates whether the object has been revoked."/>
+         <Field name="confidence" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the confidence that the creator has in the correctness of their data."/>
+         <Field name="lang" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the language of the text content in this object."/>
+         <Field name="external_references" type="string[]" nullable="true" hidden="false" readonly="false" description="A list of external references which refers to non-STIX information."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="roles" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of roles that this Identity performs (e.g., CEO, Domain Administrators, Doctors, Hospital, or Retailer). No open vocabulary is yet defined for this property."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="The name of this Identity."/>
+         <Field name="description" type="string" nullable="true" hidden="false" readonly="false" description="A description that provides more details and context about the Identity."/>
+         <Field name="identity_class" type="string" nullable="true" hidden="false" readonly="false" description="The type of entity that this Identity describes, e.g., an individual or organization. Open Vocab - identity-class-ov"/>
+         <Field name="sectors" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of sectors that this Identity belongs to. Open Vocab - industry-sector-ov"/>
+         <Field name="contact_information" type="string" nullable="true" hidden="false" readonly="false" description="The contact information (e-mail, phone number, etc.) for this Identity."/>
+
+      </Fields>
+   </Properties>
+</MaltegoEntity>

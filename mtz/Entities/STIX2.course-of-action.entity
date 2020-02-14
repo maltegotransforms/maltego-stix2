@@ -1,0 +1,30 @@
+<MaltegoEntity id="STIX2.course-of-action" displayName="Course Of Action" displayNamePlural="Course Of Action" description="A Course of Action is an action taken either to prevent an attack or to respond to an attack that is in progress." category="STIX 2" smallIconResource="stix2_course_of_action" largeIconResource="stix2_course_of_action" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="name" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `course-of-action`.">
+            <DefaultValue>course-of-action</DefaultValue>
+            <SampleValue>course-of-action</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent this object."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="created_by_ref" type="string" nullable="true" hidden="false" readonly="false" description="The ID of the Source object that describes who created this object."/>
+         <Field name="labels" type="string[]" nullable="true" hidden="false" readonly="false" description="The labels property specifies a set of terms used to describe this object."/>
+         <Field name="created" type="string" nullable="true" hidden="false" readonly="false" description="The created property represents the time at which the first version of this object was created. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="modified" type="string" nullable="true" hidden="false" readonly="false" description="The modified property represents the time that this particular version of the object was modified. The timstamp value MUST be precise to the nearest millisecond."/>
+         <Field name="revoked" type="string" nullable="true" hidden="false" readonly="false" description="The revoked property indicates whether the object has been revoked."/>
+         <Field name="confidence" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the confidence that the creator has in the correctness of their data."/>
+         <Field name="lang" type="string" nullable="true" hidden="false" readonly="false" description="Identifies the language of the text content in this object."/>
+         <Field name="external_references" type="string[]" nullable="true" hidden="false" readonly="false" description="A list of external references which refers to non-STIX information."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="action_type" type="string" nullable="true" hidden="false" readonly="false" description="The type of action defined by either the action_bin property or the dereferenced content from the action_reference property. Open Vocab - course-of-action-type-ov."/>
+         <Field name="os_execution_envs" type="string[]" nullable="true" hidden="false" readonly="false" description="A recommendation on the operating systems that this course of action can be applied to."/>
+         <Field name="action_bin" type="string" nullable="true" hidden="false" readonly="false" description="Base64-encoded action content."/>
+         <Field name="action_reference" type="string" nullable="true" hidden="false" readonly="false" description="The value of this property MUST be a valid external reference that resolves to the action content as defined by the action_type property."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="The name used to identify the Course of Action."/>
+         <Field name="description" type="string" nullable="true" hidden="false" readonly="false" description="A description that provides more details and context about this object, potentially including its purpose and its key characteristics."/>
+
+      </Fields>
+   </Properties>
+</MaltegoEntity>
