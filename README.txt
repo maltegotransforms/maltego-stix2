@@ -14,3 +14,6 @@ Generate
 
 Use
 	- Import entities.mtz in Maltego
+
+TODO
+	- add mini-transforms to extract data from fields ?

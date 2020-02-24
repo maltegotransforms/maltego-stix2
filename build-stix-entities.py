@@ -70,7 +70,11 @@ for schema_path in schema_paths:
 					"category": "STIX 2",
 					"smallIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
 					"largeIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
-					"mainValue": "name" if "required" in entity_schema and "name" in entity_schema["required"] else "id",
+					"mainValue": (
+						"name" if "required" in entity_schema and "name" in entity_schema["required"] else (
+							"relationship_type" if "required" in entity_schema and "relationship_type" in entity_schema["required"] else "id"
+						)
+					),
 					"fields": "".join(v for k,v in fields.items())
 				}
 				t = entity_template.read()
