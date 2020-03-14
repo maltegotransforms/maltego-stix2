@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.observed-data" displayName="Observed Data" displayNamePlural="Observed Data" description="Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the Cyber Observable specification." category="STIX 2 domain objects" smallIconResource="stix2_observed_data" largeIconResource="stix2_observed_data" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="id" value="id">
+   <Properties image="" value="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `observed-data`.">
@@ -26,4 +26,7 @@
 
       </Fields>
    </Properties>
+   <BaseEntities>
+
+   </BaseEntities>
 </MaltegoEntity>

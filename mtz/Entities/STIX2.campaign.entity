@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.campaign" displayName="Campaign" displayNamePlural="Campaign" description="A Campaign is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets." category="STIX 2 domain objects" smallIconResource="stix2_campaign" largeIconResource="stix2_campaign" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="name" value="name">
+   <Properties image="" value="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `campaign`.">
@@ -27,4 +27,7 @@
 
       </Fields>
    </Properties>
+   <BaseEntities>
+
+   </BaseEntities>
 </MaltegoEntity>

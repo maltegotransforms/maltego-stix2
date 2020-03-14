@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.threat-actor" displayName="Threat Actor" displayNamePlural="Threat Actor" description="Threat Actors are actual individuals, groups, or organizations believed to be operating with malicious intent." category="STIX 2 domain objects" smallIconResource="stix2_threat_actor" largeIconResource="stix2_threat_actor" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="name" value="name">
+   <Properties image="" value="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `threat-actor`.">
@@ -34,4 +34,7 @@
 
       </Fields>
    </Properties>
+   <BaseEntities>
+      <BaseEntity>cyrildemonceaux.Attacker</BaseEntity>
+   </BaseEntities>
 </MaltegoEntity>

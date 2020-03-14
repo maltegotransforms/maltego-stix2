@@ -1,6 +1,6 @@
 import os
 import json
-from config import schema_config
+from config import schema_config, heritage_config
 
 def resolve_refs(schema, path):
 	if isinstance(schema, dict):
@@ -60,6 +60,9 @@ for schema in schema_config:
 
 			# Export entity
 			with open("./templates/template.entity", "r") as entity_template:
+				base_entity = ""
+				if entity_schema["title"] in heritage_config and heritage_config[entity_schema["title"]] != "":
+					base_entity = "      <BaseEntity>"+heritage_config[entity_schema["title"]]+"</BaseEntity>"
 				data = {
 					"id": "STIX2." + entity_schema["title"],
 					"displayName": entity_schema["title"].replace('-', ' ').title(),
@@ -69,11 +72,15 @@ for schema in schema_config:
 					"smallIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
 					"largeIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
 					"mainValue": (
-						"name" if "required" in entity_schema and "name" in entity_schema["required"] else (
-							"relationship_type" if "required" in entity_schema and "relationship_type" in entity_schema["required"] else "id"
+						"name" if "name" in fields else (
+							"value" if "value" in fields else (
+								"relationship_type" if "relationship_type" in fields else
+									"id"
+							)
 						)
 					),
-					"fields": "".join(v for k,v in fields.items())
+					"fields": "".join(v for k,v in fields.items()),
+					"baseEntities": base_entity
 				}
 				t = entity_template.read()
 				with open("./mtz/Entities/"+data["id"]+".entity", "w") as output:

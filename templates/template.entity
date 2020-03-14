@@ -1,8 +1,11 @@
 <MaltegoEntity id="{id}" displayName="{displayName}" displayNamePlural="{namePlural}" description="{description}" category="{category}" smallIconResource="{smallIconResource}" largeIconResource="{largeIconResource}" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="{mainValue}" value="{mainValue}">
+   <Properties image="" value="{mainValue}">
       <Groups/>
       <Fields>
 {fields}
       </Fields>
    </Properties>
+   <BaseEntities>
+{baseEntities}
+   </BaseEntities>
 </MaltegoEntity>

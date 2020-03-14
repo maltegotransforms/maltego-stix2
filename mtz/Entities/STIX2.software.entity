@@ -1,0 +1,26 @@
+<MaltegoEntity id="STIX2.software" displayName="Software" displayNamePlural="Software" description="The Software Object represents high-level properties associated with software, including software products." category="STIX 2 observables" smallIconResource="stix2_software" largeIconResource="stix2_software" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `software`.">
+            <DefaultValue>software</DefaultValue>
+            <SampleValue>software</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent the content in this cyber-observable."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="is_defanged" type="string" nullable="true" hidden="false" readonly="false" description="Defines whether or not the data contained within the object has been defanged."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="extensions" type="string" nullable="true" hidden="false" readonly="false" description="Specifies any extensions of the object, as a dictionary."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the name of the software."/>
+         <Field name="cpe" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the Common Platform Enumeration (CPE) entry for the software, if available. The value for this property MUST be a CPE v2.3 entry from the official NVD CPE Dictionary."/>
+         <Field name="languages" type="string[]" nullable="true" hidden="false" readonly="false" description="Specifies the languages supported by the software. The value of each list member MUST be an ISO 639-2 language code."/>
+         <Field name="vendor" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the name of the vendor of the software."/>
+         <Field name="version" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the version of the software."/>
+
+      </Fields>
+   </Properties>
+   <BaseEntities>
+
+   </BaseEntities>
+</MaltegoEntity>

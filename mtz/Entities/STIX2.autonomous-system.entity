@@ -1,0 +1,24 @@
+<MaltegoEntity id="STIX2.autonomous-system" displayName="Autonomous System" displayNamePlural="Autonomous System" description="The AS object represents the properties of an Autonomous Systems (AS)." category="STIX 2 observables" smallIconResource="stix2_autonomous_system" largeIconResource="stix2_autonomous_system" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `autonomous-system`.">
+            <DefaultValue>autonomous-system</DefaultValue>
+            <SampleValue>autonomous-system</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent the content in this cyber-observable."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="is_defanged" type="string" nullable="true" hidden="false" readonly="false" description="Defines whether or not the data contained within the object has been defanged."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="extensions" type="string" nullable="true" hidden="false" readonly="false" description="Specifies any extensions of the object, as a dictionary."/>
+         <Field name="number" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the number assigned to the AS. Such assignments are typically performed by a Regional Internet Registries (RIR)."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the name of the AS."/>
+         <Field name="rir" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the name of the Regional Internet Registry (RIR) that assigned the number to the AS."/>
+
+      </Fields>
+   </Properties>
+   <BaseEntities>
+      <BaseEntity>maltego.AS</BaseEntity>
+   </BaseEntities>
+</MaltegoEntity>

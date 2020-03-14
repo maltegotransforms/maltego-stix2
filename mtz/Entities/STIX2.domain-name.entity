@@ -1,0 +1,23 @@
+<MaltegoEntity id="STIX2.domain-name" displayName="Domain Name" displayNamePlural="Domain Name" description="The Domain Name represents the properties of a network domain name." category="STIX 2 observables" smallIconResource="stix2_domain_name" largeIconResource="stix2_domain_name" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="" value="value">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `domain-name`.">
+            <DefaultValue>domain-name</DefaultValue>
+            <SampleValue>domain-name</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent the content in this cyber-observable."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="is_defanged" type="string" nullable="true" hidden="false" readonly="false" description="Defines whether or not the data contained within the object has been defanged."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="extensions" type="string" nullable="true" hidden="false" readonly="false" description="Specifies any extensions of the object, as a dictionary."/>
+         <Field name="value" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the value of the domain name."/>
+         <Field name="resolves_to_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="Specifies a list of references to one or more IP addresses or domain names that the domain name resolves to."/>
+
+      </Fields>
+   </Properties>
+   <BaseEntities>
+      <BaseEntity>maltego.Domain</BaseEntity>
+   </BaseEntities>
+</MaltegoEntity>

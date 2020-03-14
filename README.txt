@@ -16,4 +16,4 @@ Use
 	- Import entities.mtz in Maltego
 
 TODO
-	- add mini-transforms to extract data from fields ?
+	- add mini-transforms to extract data from fields : e.g : explode alias

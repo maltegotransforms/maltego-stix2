@@ -1,0 +1,33 @@
+<MaltegoEntity id="STIX2.file" displayName="File" displayNamePlural="File" description="The File Object represents the properties of a file." category="STIX 2 observables" smallIconResource="stix2_file" largeIconResource="stix2_file" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="" value="name">
+      <Groups/>
+      <Fields>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `file`.">
+            <DefaultValue>file</DefaultValue>
+            <SampleValue>file</SampleValue>
+         </Field>
+         <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent the content in this cyber-observable."/>
+         <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
+         <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
+         <Field name="is_defanged" type="string" nullable="true" hidden="false" readonly="false" description="Defines whether or not the data contained within the object has been defanged."/>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="extensions" type="string" nullable="true" hidden="false" readonly="false" description="The File Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: ntfs-ext, raster-image-ext, pdf-ext, archive-ext, windows-pebinary-ext"/>
+         <Field name="hashes" type="string" nullable="true" hidden="false" readonly="false" description="Specifies a dictionary of hashes for the file."/>
+         <Field name="size" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the size of the file, in bytes, as a non-negative integer."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the name of the file."/>
+         <Field name="name_enc" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the observed encoding for the name of the file."/>
+         <Field name="magic_number_hex" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the hexadecimal constant ('magic number') associated with a specific file format that corresponds to the file, if applicable."/>
+         <Field name="mime_type" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the MIME type name specified for the file, e.g., 'application/msword'."/>
+         <Field name="ctime" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the date/time the file was created."/>
+         <Field name="mtime" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the date/time the file was last written to/modified."/>
+         <Field name="atime" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the date/time the file was last accessed."/>
+         <Field name="parent_directory_ref" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the parent directory of the file, as a reference to a Directory Object."/>
+         <Field name="contains_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="Specifies a list of references to other Observable Objects contained within the file."/>
+         <Field name="content_ref" type="string" nullable="true" hidden="false" readonly="false" description="Specifies the content of the file, represented as an Artifact Object."/>
+
+      </Fields>
+   </Properties>
+   <BaseEntities>
+      <BaseEntity>maltego.custom.entities.AnyFile</BaseEntity>
+   </BaseEntities>
+</MaltegoEntity>
