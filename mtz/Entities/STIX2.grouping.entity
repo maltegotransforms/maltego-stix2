@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.grouping" displayName="Grouping" displayNamePlural="Grouping" description="A Grouping object explicitly asserts that the referenced STIX Objects have a shared content." category="STIX 2" smallIconResource="stix2_grouping" largeIconResource="stix2_grouping" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.grouping" displayName="Grouping" displayNamePlural="Grouping" description="A Grouping object explicitly asserts that the referenced STIX Objects have a shared content." category="STIX 2 domain objects" smallIconResource="stix2_grouping" largeIconResource="stix2_grouping" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="id" value="id">
       <Groups/>
       <Fields>

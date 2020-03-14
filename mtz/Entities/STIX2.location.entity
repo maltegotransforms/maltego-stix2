@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.location" displayName="Location" displayNamePlural="Location" description="A Location represents a geographic location. The location may be described as any, some or all of the following: region (e.g., North America), civic address (e.g. New York, US), latitude and longitude." category="STIX 2" smallIconResource="stix2_location" largeIconResource="stix2_location" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.location" displayName="Location" displayNamePlural="Location" description="A Location represents a geographic location. The location may be described as any, some or all of the following: region (e.g., North America), civic address (e.g. New York, US), latitude and longitude." category="STIX 2 domain objects" smallIconResource="stix2_location" largeIconResource="stix2_location" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="id" value="id">
       <Groups/>
       <Fields>

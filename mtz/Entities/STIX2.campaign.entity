@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.campaign" displayName="Campaign" displayNamePlural="Campaign" description="A Campaign is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets." category="STIX 2" smallIconResource="stix2_campaign" largeIconResource="stix2_campaign" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.campaign" displayName="Campaign" displayNamePlural="Campaign" description="A Campaign is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets." category="STIX 2 domain objects" smallIconResource="stix2_campaign" largeIconResource="stix2_campaign" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="name" value="name">
       <Groups/>
       <Fields>

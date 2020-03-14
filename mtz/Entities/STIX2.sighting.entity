@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.sighting" displayName="Sighting" displayNamePlural="Sighting" description="A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen." category="STIX 2" smallIconResource="stix2_sighting" largeIconResource="stix2_sighting" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.sighting" displayName="Sighting" displayNamePlural="Sighting" description="A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen." category="STIX 2 relationship objects" smallIconResource="stix2_sighting" largeIconResource="stix2_sighting" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="id" value="id">
       <Groups/>
       <Fields>

@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.relationship" displayName="Relationship" displayNamePlural="Relationship" description="The Relationship object is used to link together two SDOs in order to describe how they are related to each other." category="STIX 2" smallIconResource="stix2_relationship" largeIconResource="stix2_relationship" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.relationship" displayName="Relationship" displayNamePlural="Relationship" description="The Relationship object is used to link together two SDOs in order to describe how they are related to each other." category="STIX 2 relationship objects" smallIconResource="stix2_relationship" largeIconResource="stix2_relationship" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="relationship_type" value="relationship_type">
       <Groups/>
       <Fields>

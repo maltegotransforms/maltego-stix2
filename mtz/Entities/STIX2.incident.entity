@@ -1,10 +1,10 @@
-<MaltegoEntity id="STIX2.observed-data" displayName="Observed Data" displayNamePlural="Observed Data" description="Observed data conveys information that was observed on systems and networks, such as log data or network traffic, using the Cyber Observable specification." category="STIX 2 domain objects" smallIconResource="stix2_observed_data" largeIconResource="stix2_observed_data" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="id" value="id">
+<MaltegoEntity id="STIX2.incident" displayName="Incident" displayNamePlural="Incident" description="An incident is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets." category="STIX 2 domain objects" smallIconResource="stix2_incident" largeIconResource="stix2_incident" allowedRoot="true" conversionOrder="2147483647" visible="true">
+   <Properties image="name" value="name">
       <Groups/>
       <Fields>
-         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `observed-data`.">
-            <DefaultValue>observed-data</DefaultValue>
-            <SampleValue>observed-data</SampleValue>
+         <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `incident`.">
+            <DefaultValue>incident</DefaultValue>
+            <SampleValue>incident</SampleValue>
          </Field>
          <Field name="spec_version" type="string" nullable="true" hidden="false" readonly="false" description="The version of the STIX specification used to represent this object."/>
          <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
@@ -18,11 +18,12 @@
          <Field name="external_references" type="string[]" nullable="true" hidden="false" readonly="false" description="A list of external references which refers to non-STIX information."/>
          <Field name="object_marking_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="The list of marking-definition objects to be applied to this object."/>
          <Field name="granular_markings" type="string[]" nullable="true" hidden="false" readonly="false" description="The set of granular markings that apply to this object."/>
-         <Field name="first_observed" type="string" nullable="true" hidden="false" readonly="false" description="The beginning of the time window that the data was observed during."/>
-         <Field name="last_observed" type="string" nullable="true" hidden="false" readonly="false" description="The end of the time window that the data was observed during."/>
-         <Field name="number_observed" type="string" nullable="true" hidden="false" readonly="false" description="The number of times the data represented in the objects property was observed. This MUST be an integer between 1 and 999,999,999 inclusive."/>
-         <Field name="objects" type="string" nullable="true" hidden="false" readonly="false" description="A dictionary of Cyber Observable Objects that describes the single 'fact' that was observed."/>
-         <Field name="object_refs" type="string[]" nullable="true" hidden="false" readonly="false" description="A list of SCOs and SROs representing the observation."/>
+         <Field name="name" type="string" nullable="true" hidden="false" readonly="false" description="The name used to identify the Incident."/>
+         <Field name="description" type="string" nullable="true" hidden="false" readonly="false" description="A description that provides more details and context about the Incident, potentially including its purpose and its key characteristics."/>
+         <Field name="aliases" type="string[]" nullable="true" hidden="false" readonly="false" description="Alternative names used to identify this incident."/>
+         <Field name="first_seen" type="string" nullable="true" hidden="false" readonly="false" description="The time that this Incident was first seen."/>
+         <Field name="last_seen" type="string" nullable="true" hidden="false" readonly="false" description="The time that this Incident was last seen."/>
+         <Field name="objective" type="string" nullable="true" hidden="false" readonly="false" description="This field defines the Incident’s primary goal, objective, desired outcome, or intended effect."/>
 
       </Fields>
    </Properties>

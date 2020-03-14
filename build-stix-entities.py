@@ -1,10 +1,6 @@
 import os
 import json
-
-schema_paths = [
-	"./cti-stix2-json-schemas/schemas/sdos/",
-	"./cti-stix2-json-schemas/schemas/sros/"
-]
+from config import schema_config
 
 def resolve_refs(schema, path):
 	if isinstance(schema, dict):
@@ -28,12 +24,14 @@ def resolve_refs(schema, path):
 	else:
 		return schema
 
+categories = []
+
 # Read schemas
-for schema_path in schema_paths:
-	for entity_file_name in os.listdir(schema_path):
-		with open(os.path.join(schema_path, entity_file_name), "r") as entity_file:
+for schema in schema_config:
+	for entity_file_name in os.listdir(schema["path"]):
+		with open(os.path.join(schema["path"], entity_file_name), "r") as entity_file:
 			entity_schema = json.load(entity_file)
-			entity_schema = resolve_refs(entity_schema, schema_path)
+			entity_schema = resolve_refs(entity_schema, schema["path"])
 
 			fields = {}
 			# Only the last occurrence of each proprety is kept to handle inheritance
@@ -67,7 +65,7 @@ for schema_path in schema_paths:
 					"displayName": entity_schema["title"].replace('-', ' ').title(),
 					"namePlural": entity_schema["title"].replace('-', ' ').title(),
 					"description": entity_schema["description"].strip(),
-					"category": "STIX 2",
+					"category": schema["category"],
 					"smallIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
 					"largeIconResource": "stix2_" + entity_schema["title"].replace('-', '_'),
 					"mainValue": (
@@ -82,3 +80,15 @@ for schema_path in schema_paths:
 					output.write(t.format(**data))
 
 				print(entity_schema["title"].replace('-', ' ').title().replace(' ', '') + ' = "' + data["id"] + '"')
+
+			# Export category if new
+			if schema["category"] not in categories:
+				with open("./templates/template.category", "r") as entity_template:
+					data = {
+						"name": schema["category"]
+					}
+					t = entity_template.read()
+					with open("./mtz/EntityCategories/"+schema["category"].lower().replace(" ","-")+".category", "w") as output:
+						output.write(t.format(**data))
+
+					categories.append(schema["category"])

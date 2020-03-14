@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.opinion" displayName="Opinion" displayNamePlural="Opinion" description="An Opinion is an assessment of the correctness of the information in a STIX Object produced by a different entity and captures the level of agreement or disagreement using a fixed scale." category="STIX 2" smallIconResource="stix2_opinion" largeIconResource="stix2_opinion" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.opinion" displayName="Opinion" displayNamePlural="Opinion" description="An Opinion is an assessment of the correctness of the information in a STIX Object produced by a different entity and captures the level of agreement or disagreement using a fixed scale." category="STIX 2 domain objects" smallIconResource="stix2_opinion" largeIconResource="stix2_opinion" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="id" value="id">
       <Groups/>
       <Fields>

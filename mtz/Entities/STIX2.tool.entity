@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.tool" displayName="Tool" displayNamePlural="Tool" description="Tools are legitimate software that can be used by threat actors to perform attacks." category="STIX 2" smallIconResource="stix2_tool" largeIconResource="stix2_tool" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.tool" displayName="Tool" displayNamePlural="Tool" description="Tools are legitimate software that can be used by threat actors to perform attacks." category="STIX 2 domain objects" smallIconResource="stix2_tool" largeIconResource="stix2_tool" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="name" value="name">
       <Groups/>
       <Fields>

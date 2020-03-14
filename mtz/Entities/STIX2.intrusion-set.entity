@@ -1,4 +1,4 @@
-<MaltegoEntity id="STIX2.intrusion-set" displayName="Intrusion Set" displayNamePlural="Intrusion Set" description="An Intrusion Set is a grouped set of adversary behavior and resources with common properties that is believed to be orchestrated by a single organization." category="STIX 2" smallIconResource="stix2_intrusion_set" largeIconResource="stix2_intrusion_set" allowedRoot="true" conversionOrder="2147483647" visible="true">
+<MaltegoEntity id="STIX2.intrusion-set" displayName="Intrusion Set" displayNamePlural="Intrusion Set" description="An Intrusion Set is a grouped set of adversary behavior and resources with common properties that is believed to be orchestrated by a single organization." category="STIX 2 domain objects" smallIconResource="stix2_intrusion_set" largeIconResource="stix2_intrusion_set" allowedRoot="true" conversionOrder="2147483647" visible="true">
    <Properties image="name" value="name">
       <Groups/>
       <Fields>
