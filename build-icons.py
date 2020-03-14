@@ -11,7 +11,8 @@ for icons in icons_config:
 				image = Image.open(os.path.join(dirName, fname))
 
 				entity_name = "stix2_"+fname.split(icons["filter"])[0].replace("-", "_")
-				entity_name = entity_name.replace("coa", "course_of_action")
+				for k, v in icons["replace"].items():
+					entity_name = entity_name.replace(k, v)
 
 				new_image_96 = image.resize((96, 96))
 				new_image_96.save(os.path.join(output_dir, entity_name+"96.png"))

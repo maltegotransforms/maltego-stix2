@@ -57,8 +57,9 @@ heritage_config = {
 # Config of PNG files to process to create Maltego icons
 # Each element should follow the format :
 # {
-#	 "path": string, # path to a folder containing PNG files. A recursive search is done inside this folder.
-#	 "filter": string   # part of the PNG files names to proces
+# 	"path": string, # path to a folder containing PNG files. A recursive search is done inside this folder.
+# 	"filter": string   # part of the PNG files names to proces
+# 	"replace": {"string_to_replace": "replacement"} # Search and replace in PNG file names
 # }
 # The icon name should shart with the type of the entity (eg "malware") 
 # If several icons are available for each entity, the filter parameter can be used to filter
@@ -66,6 +67,10 @@ heritage_config = {
 icons_config = [
 	{
 		"path": "./stix2-graphics/icons/png/",
-		"filter": "-round-flat-300"
+		"filter": "-round-flat-300",
+		"replace": {
+			"coa": "course_of_action",
+			"http": "url"
+		}
 	}
 ]
