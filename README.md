@@ -30,7 +30,7 @@ $ pip3 install -r requirements.txt
 
 ### Generate
 
-To generate 
+To generate the `entities.mtz` file:
 
 ```
 $ git submodule update
