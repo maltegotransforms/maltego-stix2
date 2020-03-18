@@ -29,6 +29,7 @@ def resolve_refs(schema, path):
 
 
 categories = []
+entities_ref = ""
 
 # Read schemas
 for schema in schema_config:
@@ -116,12 +117,8 @@ for schema in schema_config:
                 with open("./mtz/Entities/" + data["id"] + ".entity", "w") as output:
                     output.write(t.format(**data))
 
-                print(
-                    entity_schema["title"].replace("-", " ").title().replace(" ", "")
-                    + ' = "'
-                    + data["id"]
-                    + '"'
-                )
+                entities_ref += entity_schema["title"].replace("-", " ").title().replace(" ", "") \
+                    + ' = "' + data["id"] + '"\n'
 
             # Export category if new
             if schema["category"] not in categories:
@@ -137,3 +134,7 @@ for schema in schema_config:
                         output.write(t.format(**data))
 
                     categories.append(schema["category"])
+
+# Export entities definition in Python format to extend Maltego TRX
+with open("./output/entities.py", "w") as output:
+    output.write(entities_ref)

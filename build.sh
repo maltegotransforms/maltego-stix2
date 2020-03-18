@@ -6,5 +6,5 @@ echo "Processing icons"
 python3 build-icons.py
 echo "Generate .mtz"
 cd mtz
-zip -r ../entities.mtz ./Entities ./EntityCategories ./Icons
+zip -q -r ../output/entities.mtz ./Entities ./EntityCategories ./Icons
 cd ../
