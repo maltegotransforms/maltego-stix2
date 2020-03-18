@@ -117,8 +117,12 @@ for schema in schema_config:
                 with open("./mtz/Entities/" + data["id"] + ".entity", "w") as output:
                     output.write(t.format(**data))
 
-                entities_ref += entity_schema["title"].replace("-", " ").title().replace(" ", "") \
-                    + ' = "' + data["id"] + '"\n'
+                entities_ref += (
+                    entity_schema["title"].replace("-", " ").title().replace(" ", "")
+                    + ' = "'
+                    + data["id"]
+                    + '"\n'
+                )
 
             # Export category if new
             if schema["category"] not in categories:
