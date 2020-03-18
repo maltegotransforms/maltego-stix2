@@ -1,3 +1,4 @@
 *.pyc
 entities.mtz
 output/*
+config.py
