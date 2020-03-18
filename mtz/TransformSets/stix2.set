@@ -1,0 +1,12 @@
+<TransformSet name="STIX2" description="">
+   <Transforms>
+      <Transform name="stix2.threat-actor.explode-aliases"/>
+      <Transform name="stix2.intrusion-set.explode-aliases"/>
+      <Transform name="stix2.campaign.explode-aliases"/>
+      <Transform name="stix2.malware.explode-aliases"/>
+      <Transform name="stix2.infrastructure.explode-aliases"/>
+      <Transform name="stix2.incident.explode-aliases"/>
+      <Transform name="stix2.attack-pattern.explode-aliases"/>
+      <Transform name="stix2.tool.explode-aliases"/>
+   </Transforms>
+</TransformSet>

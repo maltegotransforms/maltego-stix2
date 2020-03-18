@@ -1,0 +1,9 @@
+Transform id,Description,Input type,Sets
+stix2.threat-actor.explode-aliases,Threat Actor to Aliases,STIX2.threat-actor,STIX2
+stix2.intrusion-set.explode-aliases,Intrusion Set to Aliases,STIX2.intrusion-set,STIX2
+stix2.campaign.explode-aliases,Campaign to Aliases,STIX2.campaign,STIX2
+stix2.malware.explode-aliases,Malware to Aliases,STIX2.malware,STIX2
+stix2.infrastructure.explode-aliases,Infrastructure to Aliases,STIX2.infrastructure,STIX2
+stix2.incident.explode-aliases,Incident to Aliases,STIX2.incident,STIX2
+stix2.attack-pattern.explode-aliases,Attack Pattern to Aliases,STIX2.attack-pattern,STIX2
+stix2.tool.explode-aliases,Tool to Aliases,STIX2.tool,STIX2

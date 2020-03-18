@@ -1,1 +1,2 @@
 Pillow
+maltego-trx==1.3.6

@@ -1,6 +1,7 @@
 # Maltego STIX2 entities
 
 This project allow you to generate a set of Maltego entities generated from official STIX 2 schemas.
+It also contains generic transforms to explore the properties of STIX 2 entities.
 
 ## Sources in submodule
 
@@ -30,19 +31,33 @@ $ pip3 install -r requirements.txt
 
 ### Generate
 
-Update te file `config.py` according to your needs
+The local transforms are leveraging the Maltego TRX library. The first step is to create the configuration file:
+
+```
+$ cp config.yml.sample config.yml
+```
+
+Update the file according to your setup and your needs and then execute:
 
 To generate the `entities.mtz` file:
 
 ```
 $ git submodule update
-$ ./build.sh
+$ ./build_entities.sh
+```
+
+To generate the `transforms.mtz` file:
+
+```
+$ ./build_transforms.sh
+```
+
+If you specified a different path for the `src` directory of thie repository, please copy the content in it:
+
+```
+$ cp -a src /path/to/your/project/OpenCTI-Maltego/src
 ```
 
 ## Use
 
-Import the file `output/entities.mtz` in Maltego using the "Import config" menu.
-
-## TODO
-
-- Add mini-transforms to extract data from fields : e.g : explode alias
+Import the files `output/entities.mtz` and `output/transforms.mtz` in Maltego using the "Import config" menu.
