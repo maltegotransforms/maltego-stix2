@@ -30,6 +30,8 @@ $ pip3 install -r requirements.txt
 
 ### Generate
 
+Update te file `config.py` according to your needs
+
 To generate the `entities.mtz` file:
 
 ```
@@ -39,7 +41,7 @@ $ ./build.sh
 
 ## Use
 
-Import the file `entities.mtz` in Maltego using the "Import config" menu.
+Import the file `output/entities.mtz` in Maltego using the "Import config" menu.
 
 ## TODO
 
