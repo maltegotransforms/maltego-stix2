@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.mutex" displayName="Mutex" displayNamePlural="Mutex" description="The Mutex Object represents the properties of a mutual exclusion (mutex) object." category="STIX 2 observables" smallIconResource="stix2_mutex" largeIconResource="stix2_mutex" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `mutex`.">
@@ -17,6 +17,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.configuration.Mutex</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

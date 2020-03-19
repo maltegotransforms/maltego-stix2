@@ -27,7 +27,7 @@ schema_config = [
     {
         "path": "./cti-stix2-json-schemas-extended/schemas/sdos/",
         "category": "STIX 2 domain objects",
-    },
+    }
 ]
 
 # Config to handle Maltego entities inheritance

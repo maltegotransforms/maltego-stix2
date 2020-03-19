@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.sighting" displayName="Sighting" displayNamePlural="Sighting" description="A Sighting denotes the belief that something in CTI (e.g., an indicator, malware, tool, threat actor, etc.) was seen." category="STIX 2 relationship objects" smallIconResource="stix2_sighting" largeIconResource="stix2_sighting" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `sighting`.">
@@ -30,6 +30,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

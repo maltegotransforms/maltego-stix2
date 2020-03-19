@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.report" displayName="Report" displayNamePlural="Report" description="Reports are collections of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique, including context and related details." category="STIX 2 domain objects" smallIconResource="stix2_report" largeIconResource="stix2_report" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `report`.">
@@ -27,6 +27,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

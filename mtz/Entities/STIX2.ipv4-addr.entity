@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.ipv4-addr" displayName="Ipv4 Addr" displayNamePlural="Ipv4 Addr" description="The IPv4 Address Object represents one or more IPv4 addresses expressed using CIDR notation." category="STIX 2 observables" smallIconResource="stix2_ipv4_addr" largeIconResource="stix2_ipv4_addr" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="value">
+   <Properties image="" value="value" displayValue="value">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `ipv4-addr`.">
@@ -19,6 +19,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.IPv4Address</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

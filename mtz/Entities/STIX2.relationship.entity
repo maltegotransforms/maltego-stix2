@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.relationship" displayName="Relationship" displayNamePlural="Relationship" description="The Relationship object is used to link together two SDOs in order to describe how they are related to each other." category="STIX 2 relationship objects" smallIconResource="stix2_relationship" largeIconResource="stix2_relationship" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="relationship_type">
+   <Properties image="" value="relationship_type" displayValue="relationship_type">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `relationship`.">
@@ -28,6 +28,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

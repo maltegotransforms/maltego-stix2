@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.user-account" displayName="User Account" displayNamePlural="User Account" description="The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts." category="STIX 2 observables" smallIconResource="stix2_user_account" largeIconResource="stix2_user_account" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `user-account`.">
@@ -30,6 +30,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.indicators.systemindicator</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

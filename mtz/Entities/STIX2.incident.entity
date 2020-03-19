@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.incident" displayName="Incident" displayNamePlural="Incident" description="An incident is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets." category="STIX 2 domain objects" smallIconResource="stix2_incident" largeIconResource="stix2_incident" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `incident`.">
@@ -28,6 +28,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.Incident</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

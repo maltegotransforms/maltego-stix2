@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.mac-addr" displayName="Mac Addr" displayNamePlural="Mac Addr" description="The MAC Address Object represents a single Media Access Control (MAC) address." category="STIX 2 observables" smallIconResource="stix2_mac_addr" largeIconResource="stix2_mac_addr" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="value">
+   <Properties image="" value="value" displayValue="value">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `mac-addr`.">
@@ -17,6 +17,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.indicators.networkindicator</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

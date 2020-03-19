@@ -3,7 +3,10 @@
 echo "Clear old results"
 rm output/entities.mtz 2> /dev/null
 rm output/entities.py 2> /dev/null
-rm -R mtz/Icons/* mtz/Entities/* mtz/EntityCategories/* 2> /dev/null
+rm -R mtz/Icons/STIX2/* mtz/Entities/* mtz/EntityCategories/* 2> /dev/null
+
+echo "Add core entity"
+cp ./templates/STIX2.core.entity ./mtz/Entities/
 
 echo "Build Maltego Entities"
 python3 build-stix-entities.py

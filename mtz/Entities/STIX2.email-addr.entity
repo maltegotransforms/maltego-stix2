@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.email-addr" displayName="Email Addr" displayNamePlural="Email Addr" description="The Email Address Object represents a single email address." category="STIX 2 observables" smallIconResource="stix2_email_addr" largeIconResource="stix2_email_addr" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="value">
+   <Properties image="" value="value" displayValue="value">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `email-addr`.">
@@ -19,6 +19,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.EmailAddress</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>
