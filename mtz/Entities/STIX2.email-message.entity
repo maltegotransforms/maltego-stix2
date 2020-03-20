@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.email-message" displayName="Email Message" displayNamePlural="Email Message" description="The Email Message Object represents an instance of an email message." category="STIX 2 observables" smallIconResource="stix2_email_message" largeIconResource="stix2_email_message" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `email-message`.">
@@ -28,6 +28,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.Document</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

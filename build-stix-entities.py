@@ -27,9 +27,49 @@ def resolve_refs(schema, path):
     else:
         return schema
 
+def generateFields(schemaAllOf):
+    fields = {}
+    for properties in schemaAllOf:
+        if "properties" in properties:
+            for key, value in properties["properties"].items():
+                property_type = "string"
+                if "type" in value:
+                    if value["type"] == "array":
+                        property_type = "string[]"
+                if "enum" in value and len(value["enum"]) == 1:
+                    data = {
+                        "name": key,
+                        "type": property_type,
+                        "description": value["description"]
+                        if "description" in value
+                        else "",
+                        "value": value["enum"][0],
+                    }
+                    fields[
+                        key
+                    ] = '         <Field name="{name}" type="{type}" nullable="true" hidden="false" readonly="true" description="{description}">\n            <DefaultValue>{value}</DefaultValue>\n            <SampleValue>{value}</SampleValue>\n         </Field>\n'.format(
+                        **data
+                    )
+                else:
+                    data = {
+                        "name": key,
+                        "type": property_type,
+                        "description": value["description"]
+                        if "description" in value
+                        else "",
+                    }
+                    fields[
+                        key
+                    ] = '         <Field name="{name}" type="{type}" nullable="true" hidden="false" readonly="false" description="{description}"/>\n'.format(
+                        **data
+                    )
+        elif "allOf" in properties:
+            fields.update(generateFields(properties["allOf"]))
+
+    return fields
 
 categories = []
-entities_ref = ""
+entities_ref = {}
 
 # Read schemas
 for schema in schema_config:
@@ -38,52 +78,18 @@ for schema in schema_config:
             entity_schema = json.load(entity_file)
             entity_schema = resolve_refs(entity_schema, schema["path"])
 
-            fields = {}
-            # Only the last occurrence of each proprety is kept to handle inheritance
-            for properties in entity_schema["allOf"]:
-                if "properties" in properties:
-                    for key, value in properties["properties"].items():
-                        property_type = "string"
-                        if "type" in value:
-                            if value["type"] == "array":
-                                property_type = "string[]"
-                        if "enum" in value and len(value["enum"]) == 1:
-                            data = {
-                                "name": key,
-                                "type": property_type,
-                                "description": value["description"]
-                                if "description" in value
-                                else "",
-                                "value": value["enum"][0],
-                            }
-                            fields[
-                                key
-                            ] = '         <Field name="{name}" type="{type}" nullable="true" hidden="false" readonly="true" description="{description}">\n            <DefaultValue>{value}</DefaultValue>\n            <SampleValue>{value}</SampleValue>\n         </Field>\n'.format(
-                                **data
-                            )
-                        else:
-                            data = {
-                                "name": key,
-                                "type": property_type,
-                                "description": value["description"]
-                                if "description" in value
-                                else "",
-                            }
-                            fields[
-                                key
-                            ] = '         <Field name="{name}" type="{type}" nullable="true" hidden="false" readonly="false" description="{description}"/>\n'.format(
-                                **data
-                            )
+            fields = generateFields(entity_schema["allOf"])
 
             # Export entity
             with open("./templates/template.entity", "r") as entity_template:
-                base_entity = ""
+                base_entity = "      <BaseEntity>STIX2.core</BaseEntity>"
+                #base_entity = ""
                 if (
                     entity_schema["title"] in heritage_config
                     and heritage_config[entity_schema["title"]] != ""
                 ):
-                    base_entity = (
-                        "      <BaseEntity>"
+                    base_entity += (
+                        "\n      <BaseEntity>"
                         + heritage_config[entity_schema["title"]]
                         + "</BaseEntity>"
                     )
@@ -117,12 +123,8 @@ for schema in schema_config:
                 with open("./mtz/Entities/" + data["id"] + ".entity", "w") as output:
                     output.write(t.format(**data))
 
-                entities_ref += (
-                    entity_schema["title"].replace("-", " ").title().replace(" ", "")
-                    + ' = "'
-                    + data["id"]
-                    + '"\n'
-                )
+                entities_ref[data["id"]] = entity_schema["title"].replace("-", " ").title().replace(" ", "") \
+                    + ' = "' + data["id"] + '"\n'
 
             # Export category if new
             if schema["category"] not in categories:
@@ -141,4 +143,4 @@ for schema in schema_config:
 
 # Export entities definition in Python format to extend Maltego TRX
 with open("./output/entities.py", "w") as output:
-    output.write(entities_ref)
+    output.write("".join(v for k,v in entities_ref.items()))

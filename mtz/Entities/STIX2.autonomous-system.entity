@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.autonomous-system" displayName="Autonomous System" displayNamePlural="Autonomous System" description="The AS object represents the properties of an Autonomous Systems (AS)." category="STIX 2 observables" smallIconResource="stix2_autonomous_system" largeIconResource="stix2_autonomous_system" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `autonomous-system`.">
@@ -19,6 +19,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.AS</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

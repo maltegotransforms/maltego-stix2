@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.location" displayName="Location" displayNamePlural="Location" description="A Location represents a geographic location. The location may be described as any, some or all of the following: region (e.g., North America), civic address (e.g. New York, US), latitude and longitude." category="STIX 2 domain objects" smallIconResource="stix2_location" largeIconResource="stix2_location" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `location`.">
@@ -33,6 +33,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.Location</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

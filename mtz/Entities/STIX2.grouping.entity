@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.grouping" displayName="Grouping" displayNamePlural="Grouping" description="A Grouping object explicitly asserts that the referenced STIX Objects have a shared content." category="STIX 2 domain objects" smallIconResource="stix2_grouping" largeIconResource="stix2_grouping" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `grouping`.">
@@ -26,6 +26,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

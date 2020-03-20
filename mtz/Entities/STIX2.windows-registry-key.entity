@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.windows-registry-key" displayName="Windows Registry Key" displayNamePlural="Windows Registry Key" description="The Registry Key Object represents the properties of a Windows registry key." category="STIX 2 observables" smallIconResource="stix2_windows_registry_key" largeIconResource="stix2_windows_registry_key" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `windows-registry-key`.">
@@ -21,6 +21,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.indicators.systemindicator</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.software" displayName="Software" displayNamePlural="Software" description="The Software Object represents high-level properties associated with software, including software products." category="STIX 2 observables" smallIconResource="stix2_software" largeIconResource="stix2_software" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `software`.">
@@ -21,6 +21,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.url" displayName="Url" displayNamePlural="Url" description="The URL Object represents the properties of a uniform resource locator (URL)." category="STIX 2 observables" smallIconResource="stix2_url" largeIconResource="stix2_url" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="value">
+   <Properties image="" value="value" displayValue="value">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `url`.">
@@ -17,6 +17,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.URL</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

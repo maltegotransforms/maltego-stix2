@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.file" displayName="File" displayNamePlural="File" description="The File Object represents the properties of a file." category="STIX 2 observables" smallIconResource="stix2_file" largeIconResource="stix2_file" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `file`.">
@@ -28,6 +28,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.AnyFile</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

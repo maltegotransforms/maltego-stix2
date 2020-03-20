@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.opinion" displayName="Opinion" displayNamePlural="Opinion" description="An Opinion is an assessment of the correctness of the information in a STIX Object produced by a different entity and captures the level of agreement or disagreement using a fixed scale." category="STIX 2 domain objects" smallIconResource="stix2_opinion" largeIconResource="stix2_opinion" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `opinion`.">
@@ -26,6 +26,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

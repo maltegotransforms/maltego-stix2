@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.infrastructure" displayName="Infrastructure" displayNamePlural="Infrastructure" description="Infrastructure objects describe systems, software services, and associated physical or virtual resources." category="STIX 2 domain objects" smallIconResource="stix2_infrastructure" largeIconResource="stix2_infrastructure" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="name">
+   <Properties image="" value="name" displayValue="name">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `infrastructure`.">
@@ -29,6 +29,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.indicators.networkindicator</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

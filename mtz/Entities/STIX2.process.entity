@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.process" displayName="Process" displayNamePlural="Process" description="The Process Object represents common properties of an instance of a computer program as executed on an operating system." category="STIX 2 observables" smallIconResource="stix2_process" largeIconResource="stix2_process" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `process`.">
@@ -27,6 +27,7 @@
       </Fields>
    </Properties>
    <BaseEntities>
+      <BaseEntity>STIX2.core</BaseEntity>
       <BaseEntity>maltego.custom.entities.indicators.systemindicator</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

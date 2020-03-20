@@ -1,0 +1,24 @@
+{
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/identity.json",
+  "$schema": "Custom",
+  "title": "identity",
+  "description": "Identities can represent actual individuals, organizations, or groups (e.g., ACME, Inc.) as well as classes of individuals, organizations, or groups.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../cti-stix2-json-schemas/schemas/sdos/identity.json"
+    },
+    {
+      "properties": {
+        "aliases": {
+          "type": "array",
+          "description": "Alternative names used to identify this incident.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  ]
+}

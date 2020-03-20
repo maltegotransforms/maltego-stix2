@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.note" displayName="Note" displayNamePlural="Note" description="A Note is a comment or note containing informative text to help explain the context of one or more STIX Objects (SDOs or SROs) or to provide additional analysis that is not contained in the original object." category="STIX 2 domain objects" smallIconResource="stix2_note" largeIconResource="stix2_note" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The type of this object, which MUST be the literal `note`.">
@@ -26,6 +26,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>

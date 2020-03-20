@@ -1,5 +1,5 @@
 <MaltegoEntity id="STIX2.network-traffic" displayName="Network Traffic" displayNamePlural="Network Traffic" description="The Network Traffic Object represents arbitrary network traffic that originates from a source and is addressed to a destination." category="STIX 2 observables" smallIconResource="stix2_network_traffic" largeIconResource="stix2_network_traffic" allowedRoot="true" conversionOrder="2147483647" visible="true">
-   <Properties image="" value="id">
+   <Properties image="" value="id" displayValue="id">
       <Groups/>
       <Fields>
          <Field name="type" type="string" nullable="true" hidden="false" readonly="true" description="The value of this property MUST be `network-traffic`.">
@@ -32,6 +32,6 @@
       </Fields>
    </Properties>
    <BaseEntities>
-
+      <BaseEntity>STIX2.core</BaseEntity>
    </BaseEntities>
 </MaltegoEntity>
