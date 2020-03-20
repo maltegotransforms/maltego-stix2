@@ -27,6 +27,7 @@ def resolve_refs(schema, path):
     else:
         return schema
 
+
 def generateFields(schemaAllOf):
     fields = {}
     for properties in schemaAllOf:
@@ -68,6 +69,7 @@ def generateFields(schemaAllOf):
 
     return fields
 
+
 categories = []
 entities_ref = {}
 
@@ -83,7 +85,7 @@ for schema in schema_config:
             # Export entity
             with open("./templates/template.entity", "r") as entity_template:
                 base_entity = "      <BaseEntity>STIX2.core</BaseEntity>"
-                #base_entity = ""
+                # base_entity = ""
                 if (
                     entity_schema["title"] in heritage_config
                     and heritage_config[entity_schema["title"]] != ""
@@ -123,8 +125,12 @@ for schema in schema_config:
                 with open("./mtz/Entities/" + data["id"] + ".entity", "w") as output:
                     output.write(t.format(**data))
 
-                entities_ref[data["id"]] = entity_schema["title"].replace("-", " ").title().replace(" ", "") \
-                    + ' = "' + data["id"] + '"\n'
+                entities_ref[data["id"]] = (
+                    entity_schema["title"].replace("-", " ").title().replace(" ", "")
+                    + ' = "'
+                    + data["id"]
+                    + '"\n'
+                )
 
             # Export category if new
             if schema["category"] not in categories:
@@ -143,4 +149,4 @@ for schema in schema_config:
 
 # Export entities definition in Python format to extend Maltego TRX
 with open("./output/entities.py", "w") as output:
-    output.write("".join(v for k,v in entities_ref.items()))
+    output.write("".join(v for k, v in entities_ref.items()))

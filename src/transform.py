@@ -53,12 +53,22 @@ if __name__ == "__main__":
                 entity_type = Identity
                 maltego_property = "id"
 
-            property_str = client_msg.getProperty(property_name) if client_msg.getProperty(property_name) else None
+            property_str = (
+                client_msg.getProperty(property_name)
+                if client_msg.getProperty(property_name)
+                else None
+            )
             if property_str and len(property_str) > 0:
                 # STR to LST allowing several formats
-                property_str = property_str.replace('", "',"','") # quote {"} separator {, }
-                property_str = property_str.replace('","',"','") # quote {"} separator {,}
-                property_str = property_str.replace("', '","','") # quote {'} separator {, }
+                property_str = property_str.replace(
+                    '", "', "','"
+                )  # quote {"} separator {, }
+                property_str = property_str.replace(
+                    '","', "','"
+                )  # quote {"} separator {,}
+                property_str = property_str.replace(
+                    "', '", "','"
+                )  # quote {'} separator {, }
                 # Clean begining of the list
                 if property_str.startswith("["):
                     property_str = property_str[1:]
@@ -79,7 +89,9 @@ if __name__ == "__main__":
                     if len(value) > 0:
                         if maltego_property:
                             entity = transform.addEntity(entity_type, None)
-                            entity.addProperty(fieldName=maltego_property, value=sanitize(value, True))
+                            entity.addProperty(
+                                fieldName=maltego_property, value=sanitize(value, True)
+                            )
                         else:
                             transform.addEntity(entity_type, sanitize(value, True))
 
