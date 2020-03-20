@@ -3,3 +3,4 @@ entities.mtz
 output/*
 mtz/*
 config.py
+.idea
