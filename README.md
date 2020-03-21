@@ -13,8 +13,8 @@ We are using the following sources to generate Maltego entities:
 ## Generation
 
 ```
-$ git clone https://github.com/amr-cossi/Maltego-STIX2
-$ cd Maltego-STIX2
+$ git clone https://github.com/OpenCTI-Platform/maltego-stix2
+$ cd maltego-stix2
 $ git submodule init
 ```
 
@@ -55,7 +55,7 @@ $ ./build_transforms.sh
 If you specified a different path for the `src` directory of thie repository, please copy the content in it:
 
 ```
-$ cp -a src /path/to/your/project/OpenCTI-Maltego/src
+$ cp -a src /path/to/your/project/maltego-stix2/src
 ```
 
 ## Use
