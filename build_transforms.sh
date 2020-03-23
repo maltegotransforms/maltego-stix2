@@ -3,12 +3,12 @@
 echo "Clear old results"
 rm output/transforms.mtz 2> /dev/null
 rm -R mtz/Servers/ mtz/TransformSets/ mtz/TransformRepositories/Local/* 2> /dev/null
-mkdir mtz/
+mkdir mtz/ 2> /dev/null
 mkdir mtz/Servers/
 mkdir mtz/TransformSets/
 mkdir mtz/TransformRepositories/
 mkdir mtz/TransformRepositories/Local/
-mkdir output/
+mkdir output/ 2> /dev/null
 
 echo "Generate Maltego transforms config"
 python3 build-transforms.py transforms.csv
