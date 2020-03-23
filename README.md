@@ -34,7 +34,7 @@ $ pip3 install -r requirements.txt
 The local transforms are leveraging the Maltego TRX library. The first step is to create the configuration file:
 
 ```
-$ cp config.yml.sample config.yml
+$ cp config.py.sample config.py
 ```
 
 Update the file according to your setup and your needs and then execute:
