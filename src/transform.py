@@ -43,7 +43,14 @@ if __name__ == "__main__":
             client_msg.getProperty("name") if client_msg.getProperty("name") else None
         )
 
-        if "explode" in args.transformName:
+        if "convert" in args.transformName:
+            property_name = args.transformName.split("-")[1]
+            if property_name == "hash":
+                entity = transform.addEntity(File, sanitize(input_value, True))
+                entity.addProperty(
+                    fieldName="hashes", value=[sanitize(input_value, True)]
+                )
+        elif "explode" in args.transformName:
             property_name = args.transformName.split("-")[1]
             entity_type = Phrase
             maltego_property = None
@@ -52,7 +59,8 @@ if __name__ == "__main__":
             if property_name == "created_by_ref":
                 entity_type = Identity
                 maltego_property = "id"
-
+            if property_name == "hashes":
+                entity_type = "maltego.Hash"
             property_str = (
                 client_msg.getProperty(property_name)
                 if client_msg.getProperty(property_name)
@@ -87,13 +95,11 @@ if __name__ == "__main__":
 
                 for value in property_lst:
                     if len(value) > 0:
+                        entity = transform.addEntity(entity_type, sanitize(value, True))
                         if maltego_property:
-                            entity = transform.addEntity(entity_type, None)
                             entity.addProperty(
                                 fieldName=maltego_property, value=sanitize(value, True)
                             )
-                        else:
-                            transform.addEntity(entity_type, sanitize(value, True))
 
         # Output Maltego XML result
         print(transform.returnOutput())

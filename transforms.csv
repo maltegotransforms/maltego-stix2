@@ -1,4 +1,5 @@
 Transform id,Description,Input type,Sets
+stix2.identity.explode-aliases,STIX2: Identity to Aliases,STIX2.identity,STIX2
 stix2.threat-actor.explode-aliases,STIX2: Threat Actor to Aliases,STIX2.threat-actor,STIX2
 stix2.intrusion-set.explode-aliases,STIX2: Intrusion Set to Aliases,STIX2.intrusion-set,STIX2
 stix2.campaign.explode-aliases,STIX2: Campaign to Aliases,STIX2.campaign,STIX2
@@ -28,3 +29,5 @@ stix2.course-of-action.explode-created_by_ref,STIX2: Course Of Action to Creator
 stix2.sighting.explode-created_by_ref,STIX2: Sighting to Creator,STIX2.sighting,STIX2
 stix2.relationship.explode-created_by_ref,STIX2: Relationship to Creator,STIX2.relationship,STIX2
 stix2.incident.explode-created_by_ref,STIX2: Incident to Creator,STIX2.incident,STIX2
+stix2.file.explode-hashes,STIX2: File to Hashes,STIX2.file,STIX2
+maltego.hash.stix2.file.convert-hash,STIX2: Hash to File,maltego.Hash,STIX2
