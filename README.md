@@ -8,7 +8,7 @@ It also contains generic transforms to explore the properties of STIX 2 entities
 We are using the following sources to generate Maltego entities:
 
 - STIX 2 schemas : https://github.com/oasis-open/cti-stix2-json-schemas
-- Icons : https://freetaxii.github.io/stix2_0
+- Icons : https://github.com/freetaxii/stix2-graphics
 
 ## Generation
 
