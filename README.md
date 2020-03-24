@@ -52,7 +52,7 @@ To generate the `transforms.mtz` file:
 $ ./build_transforms.sh
 ```
 
-If you specified a different path for the `src` directory of thie repository, please copy the content in it:
+If you specified a different path for the `src` directory of this repository, please copy the content in it:
 
 ```
 $ cp -a src /path/to/your/project/maltego-stix2/src
