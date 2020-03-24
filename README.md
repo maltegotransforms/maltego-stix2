@@ -42,7 +42,7 @@ Update the file according to your setup and your needs and then execute:
 To generate the `entities.mtz` file:
 
 ```
-$ git submodule update
+$ git submodule update --remote
 $ ./build_entities.sh
 ```
 
