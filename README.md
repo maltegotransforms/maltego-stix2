@@ -5,12 +5,12 @@
 This project allow you to generate a set of Maltego entities generated from official STIX 2 schemas.
 It also contains generic transforms to explore the properties of STIX 2 entities.
 
-## Sources in submodule
+## Dependencies in submodules
 
-We are using the following sources to generate Maltego entities:
+We are using the following assets to generate STIX2 Maltego entities:
 
 - STIX 2 schemas : https://github.com/oasis-open/cti-stix2-json-schemas
-- Icons : https://github.com/freetaxii/stix2-graphics
+- Icons : https://github.com/freetaxii/stix2-graphics (Copyright 2016-2019 Bret Jordan, All rights reserved.)
 
 ## Generation
 
