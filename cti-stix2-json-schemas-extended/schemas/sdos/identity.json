@@ -12,7 +12,7 @@
       "properties": {
         "aliases": {
           "type": "array",
-          "description": "Alternative names used to identify this incident.",
+          "description": "Alternative names used to identify this identity.",
           "items": {
             "type": "string"
           },
