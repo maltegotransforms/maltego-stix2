@@ -27,3 +27,5 @@ cd ../
 
 echo "Copy entities.py in ./src/"
 cp ./output/entities.py ./src/
+
+echo "All done. MTZ packages can be imported in Maltego."

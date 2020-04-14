@@ -27,7 +27,7 @@ schema_config = [
     {
         "path": "./cti-stix2-json-schemas-extended/schemas/sdos/",
         "category": "STIX 2 domain objects",
-    },
+    }, # These schemas allow for custom extensions of the STIX2 format. The provided ones are used in OpenCTI
 ]
 
 # Config to handle Maltego entities inheritance
@@ -36,28 +36,28 @@ schema_config = [
 heritage_config = {
     "autonomous-system": "maltego.AS",
     "domain-name": "maltego.Domain",
-    "directory": "maltego.custom.entities.indicators.systemindicator",
-    "file": "maltego.custom.entities.AnyFile",
+    "directory": "maltego.Document",
+    "file": "maltego.Document",
     "email-addr": "maltego.EmailAddress",
     "email-message": "maltego.Document",
-    "identity": "maltego.Organization",
-    "incident": "maltego.Incident",
-    "indicator": "maltego.String",
-    "infrastructure": "maltego.custom.entities.indicators.networkindicator",
-    "intrusion-set": "cyrildemonceaux.Attacker",
+    "identity": "maltego.Company",
+    "incident": "",
+    "indicator": "",
+    "infrastructure": "",
+    "intrusion-set": "",
     "ipv4-addr": "maltego.IPv4Address",
-    "ipv6-addr": "maltego.custom.entities.infrastructure.IPv6Address",
+    "ipv6-addr": "",
     "location": "maltego.Location",
-    "mac-addr": "maltego.custom.entities.indicators.networkindicator",
-    "malware": "maltego.custom.entities.malwares.MalwareFamily",
-    "mutex": "maltego.custom.entities.configuration.Mutex",
-    "process": "maltego.custom.entities.indicators.systemindicator",
-    "threat-actor": "cyrildemonceaux.Attacker",
+    "mac-addr": "",
+    "malware": "",
+    "mutex": "",
+    "process": "",
+    "threat-actor": "maltego.Organization",
     "url": "maltego.URL",
-    "user-account": "maltego.custom.entities.indicators.systemindicator",
-    "vulnerability": "maltego.Exploit",
-    "windows-registry-key": "maltego.custom.entities.indicators.systemindicator",
-    "x509-certificate": "maltego.custom.entities.certificates.Certificatex509",
+    "user-account": "maltego.UniqueIdentifier",
+    "vulnerability": "",
+    "windows-registry-key": "",
+    "x509-certificate": "",
 }
 
 # Config of PNG files to process to create Maltego icons

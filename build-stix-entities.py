@@ -2,7 +2,6 @@ import os
 import json
 from config import schema_config, heritage_config
 
-
 def resolve_refs(schema, path):
     if isinstance(schema, dict):
         if "$ref" in schema and not schema["$ref"].startswith("#"):
@@ -78,6 +77,8 @@ for schema in schema_config:
     for entity_file_name in os.listdir(schema["path"]):
         with open(os.path.join(schema["path"], entity_file_name), "r") as entity_file:
             entity_schema = json.load(entity_file)
+            
+            #TODO Rely on external library to parse JSON-ref files
             entity_schema = resolve_refs(entity_schema, schema["path"])
 
             fields = generateFields(entity_schema["allOf"])
