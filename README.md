@@ -1,3 +1,5 @@
+![alt text](./assets/card.png)
+
 # Maltego STIX2 entities
 
 This project allow you to generate a set of Maltego entities generated from official STIX 2 schemas.
