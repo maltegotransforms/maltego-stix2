@@ -7,4 +7,4 @@ from maltego_trx.handler import handle_run
 
 register_transform_classes(transforms)
 
-handle_run(__name__, sys.argv, app, port=8081)
+handle_run(__name__, sys.argv, app, port=8080)
