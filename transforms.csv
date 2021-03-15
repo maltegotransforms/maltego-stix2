@@ -1,33 +1,94 @@
 Transform id,Description,Input type,Sets
-stix2.identity.explode-aliases,STIX2: Identity to Aliases,STIX2.identity,STIX2
-stix2.threat-actor.explode-aliases,STIX2: Threat Actor to Aliases,STIX2.threat-actor,STIX2
-stix2.intrusion-set.explode-aliases,STIX2: Intrusion Set to Aliases,STIX2.intrusion-set,STIX2
-stix2.campaign.explode-aliases,STIX2: Campaign to Aliases,STIX2.campaign,STIX2
-stix2.malware.explode-aliases,STIX2: Malware to Aliases,STIX2.malware,STIX2
-stix2.infrastructure.explode-aliases,STIX2: Infrastructure to Aliases,STIX2.infrastructure,STIX2
-stix2.incident.explode-aliases,STIX2: Incident to Aliases,STIX2.incident,STIX2
-stix2.attack-pattern.explode-aliases,STIX2: Attack Pattern to Aliases,STIX2.attack-pattern,STIX2
-stix2.tool.explode-aliases,STIX2: Tool to Aliases,STIX2.tool,STIX2
-stix2.report.explode-created_by_ref,STIX2: Report to Creator,STIX2.report,STIX2
-stix2.vulnerability.explode-created_by_ref,STIX2: Vulnerability to Creator,STIX2.vulnerability,STIX2
-stix2.opinion.explode-created_by_ref,STIX2: Opinion to Creator,STIX2.opinion,STIX2
-stix2.tool.explode-created_by_ref,STIX2: Tool to Creator,STIX2.tool,STIX2
-stix2.campaign.explode-created_by_ref,STIX2: Campaign to Creator,STIX2.campaign,STIX2
-stix2.infrastructure.explode-created_by_ref,STIX2: Infrastructure to Creator,STIX2.infrastructure,STIX2
-stix2.identity.explode-created_by_ref,STIX2: Identity to Creator,STIX2.identity,STIX2
-stix2.malware.explode-created_by_ref,STIX2: Malware to Creator,STIX2.malware,STIX2
-stix2.malware-analysis.explode-created_by_ref,STIX2: Malware Analysis to Creator,STIX2.malware-analysis,STIX2
-stix2.indicator.explode-created_by_ref,STIX2: Indicator to Creator,STIX2.indicator,STIX2
-stix2.intrusion-set.explode-created_by_ref,STIX2: Intrusion Set to Creator,STIX2.intrusion-set,STIX2
-stix2.location.explode-created_by_ref,STIX2: Location to Creator,STIX2.location,STIX2
-stix2.note.explode-created_by_ref,STIX2: Note to Creator,STIX2.note,STIX2
-stix2.threat-actor.explode-created_by_ref,STIX2: Threat Actor to Creator,STIX2.threat-actor,STIX2
-stix2.observed-data.explode-created_by_ref,STIX2: Observed Data to Creator,STIX2.observed-data,STIX2
-stix2.attack-pattern.explode-created_by_ref,STIX2: Attack Pattern to Creator,STIX2.attack-pattern,STIX2
-stix2.grouping.explode-created_by_ref,STIX2: Grouping to Creator,STIX2.grouping,STIX2
-stix2.course-of-action.explode-created_by_ref,STIX2: Course Of Action to Creator,STIX2.course-of-action,STIX2
-stix2.sighting.explode-created_by_ref,STIX2: Sighting to Creator,STIX2.sighting,STIX2
-stix2.relationship.explode-created_by_ref,STIX2: Relationship to Creator,STIX2.relationship,STIX2
-stix2.incident.explode-created_by_ref,STIX2: Incident to Creator,STIX2.incident,STIX2
-stix2.file.explode-hashes,STIX2: File to Hashes,STIX2.file,STIX2
-maltego.hash.stix2.file.convert-hash,STIX2: Hash to File,maltego.Hash,STIX2
+stix2.identity.explode-x_opencti_aliases,STIX2: Identity to Aliases,maltego.STIX2.identity,STIX2
+stix2.threat-actor.explode-aliases,STIX2: Threat Actor to Aliases,maltego.STIX2.threat-actor,STIX2
+stix2.intrusion-set.explode-aliases,STIX2: Intrusion Set to Aliases,maltego.STIX2.intrusion-set,STIX2
+stix2.campaign.explode-aliases,STIX2: Campaign to Aliases,maltego.STIX2.campaign,STIX2
+stix2.malware.explode-aliases,STIX2: Malware to Aliases,maltego.STIX2.malware,STIX2
+stix2.infrastructure.explode-aliases,STIX2: Infrastructure to Aliases,maltego.STIX2.infrastructure,STIX2
+stix2.x-opencti-incident.explode-aliases,STIX2: Incident to Aliases,maltego.STIX2.x-opencti-incident,STIX2
+stix2.attack-pattern.explode-aliases,STIX2: Attack Pattern to Aliases,maltego.STIX2.attack-pattern,STIX2
+stix2.tool.explode-aliases,STIX2: Tool to Aliases,maltego.STIX2.tool,STIX2
+stix2.report.explode-created_by_ref,STIX2: Report to Creator,maltego.STIX2.report,STIX2
+stix2.vulnerability.explode-created_by_ref,STIX2: Vulnerability to Creator,maltego.STIX2.vulnerability,STIX2
+stix2.opinion.explode-created_by_ref,STIX2: Opinion to Creator,maltego.STIX2.opinion,STIX2
+stix2.tool.explode-created_by_ref,STIX2: Tool to Creator,maltego.STIX2.tool,STIX2
+stix2.campaign.explode-created_by_ref,STIX2: Campaign to Creator,maltego.STIX2.campaign,STIX2
+stix2.infrastructure.explode-created_by_ref,STIX2: Infrastructure to Creator,maltego.STIX2.infrastructure,STIX2
+stix2.identity.explode-created_by_ref,STIX2: Identity to Creator,maltego.STIX2.identity,STIX2
+stix2.malware.explode-created_by_ref,STIX2: Malware to Creator,maltego.STIX2.malware,STIX2
+stix2.malware-analysis.explode-created_by_ref,STIX2: Malware Analysis to Creator,maltego.STIX2.malware-analysis,STIX2
+stix2.indicator.explode-created_by_ref,STIX2: Indicator to Creator,maltego.STIX2.indicator,STIX2
+stix2.intrusion-set.explode-created_by_ref,STIX2: Intrusion Set to Creator,maltego.STIX2.intrusion-set,STIX2
+stix2.location.explode-created_by_ref,STIX2: Location to Creator,maltego.STIX2.location,STIX2
+stix2.note.explode-created_by_ref,STIX2: Note to Creator,maltego.STIX2.note,STIX2
+stix2.threat-actor.explode-created_by_ref,STIX2: Threat Actor to Creator,maltego.STIX2.threat-actor,STIX2
+stix2.observed-data.explode-created_by_ref,STIX2: Observed Data to Creator,maltego.STIX2.observed-data,STIX2
+stix2.attack-pattern.explode-created_by_ref,STIX2: Attack Pattern to Creator,maltego.STIX2.attack-pattern,STIX2
+stix2.grouping.explode-created_by_ref,STIX2: Grouping to Creator,maltego.STIX2.grouping,STIX2
+stix2.course-of-action.explode-created_by_ref,STIX2: Course Of Action to Creator,maltego.STIX2.course-of-action,STIX2
+stix2.sighting.explode-created_by_ref,STIX2: Sighting to Creator,maltego.STIX2.sighting,STIX2
+stix2.relationship.explode-created_by_ref,STIX2: Relationship to Creator,maltego.STIX2.relationship,STIX2
+stix2.x-opencti-incident.explode-created_by_ref,STIX2: Incident to Creator,maltego.STIX2.x-opencti-incident,STIX2
+stix2.file.explode-hashes,STIX2: File to Hashes,maltego.STIX2.file,STIX2
+stix2.report.explode-labels,STIX2: Report to Labels,maltego.STIX2.report,STIX2
+stix2.vulnerability.explode-labels,STIX2: Vulnerability to Labels,maltego.STIX2.vulnerability,STIX2
+stix2.opinion.explode-labels,STIX2: Opinion to Labels,maltego.STIX2.opinion,STIX2
+stix2.tool.explode-labels,STIX2: Tool to Labels,maltego.STIX2.tool,STIX2
+stix2.campaign.explode-labels,STIX2: Campaign to Labels,maltego.STIX2.campaign,STIX2
+stix2.infrastructure.explode-labels,STIX2: Infrastructure to Labels,maltego.STIX2.infrastructure,STIX2
+stix2.identity.explode-labels,STIX2: Identity to Labels,maltego.STIX2.identity,STIX2
+stix2.malware.explode-labels,STIX2: Malware to Labels,maltego.STIX2.malware,STIX2
+stix2.malware-analysis.explode-labels,STIX2: Malware Analysis to Labels,maltego.STIX2.malware-analysis,STIX2
+stix2.indicator.explode-labels,STIX2: Indicator to Labels,maltego.STIX2.indicator,STIX2
+stix2.intrusion-set.explode-labels,STIX2: Intrusion Set to Labels,maltego.STIX2.intrusion-set,STIX2
+stix2.location.explode-labels,STIX2: Location to Labels,maltego.STIX2.location,STIX2
+stix2.note.explode-labels,STIX2: Note to Labels,maltego.STIX2.note,STIX2
+stix2.threat-actor.explode-labels,STIX2: Threat Actor to Labels,maltego.STIX2.threat-actor,STIX2
+stix2.observed-data.explode-labels,STIX2: Observed Data to Labels,maltego.STIX2.observed-data,STIX2
+stix2.attack-pattern.explode-labels,STIX2: Attack Pattern to Labels,maltego.STIX2.attack-pattern,STIX2
+stix2.grouping.explode-labels,STIX2: Grouping to Labels,maltego.STIX2.grouping,STIX2
+stix2.course-of-action.explode-labels,STIX2: Course Of Action to Labels,maltego.STIX2.course-of-action,STIX2
+stix2.sighting.explode-labels,STIX2: Sighting to Labels,maltego.STIX2.sighting,STIX2
+stix2.relationship.explode-labels,STIX2: Relationship to Labels,maltego.STIX2.relationship,STIX2
+stix2.x-opencti-incident.explode-labels,STIX2: Incident to Labels,maltego.STIX2.x-opencti-incident,STIX2
+stix2.grouping.explode-object_refs,STIX2: Grouping to Objects,maltego.STIX2.grouping,STIX2
+stix2.note.explode-object_refs,STIX2: Note to Objects,maltego.STIX2.note,STIX2
+stix2.observed-data.explode-object_refs,STIX2: Observed data to Objects,maltego.STIX2.observed-data,STIX2
+stix2.opinion.explode-object_refs,STIX2: Opinion to Objects,maltego.STIX2.opinion,STIX2
+stix2.report.explode-object_refs,STIX2: Report to Objects,maltego.STIX2.report,STIX2
+stix2.malware.explode-operating_system_refs,STIX2: Malware to Operating System,maltego.STIX2.malware,STIX2
+stix2.malware.explode-sample_refs,STIX2: Malware to Samples,maltego.STIX2.malware,STIX2
+stix2.malware-analysis.explode-installed_software_refs,STIX2: Malware Analysis to Installed Softwares,maltego.STIX2.malware-analysis,STIX2
+stix2.malware-analysis.explode-analysis_sco_refs,STIX2: Malware Analysis to Observables,maltego.STIX2.malware-analysis,STIX2
+stix2.malware-analysis.explode-sample_ref,STIX2: Malware Analysis to Sample,maltego.STIX2.malware-analysis,STIX2
+stix2.sighting.explode-sighting_of_ref,STIX2: Sighting to Of,maltego.STIX2.sighting,STIX2
+stix2.sighting.explode-observed_data_refs,STIX2: Sighting to Observed data,maltego.STIX2.sighting,STIX2
+stix2.sighting.explode-where_sighted_refs,STIX2: Sighting to Where,maltego.STIX2.sighting,STIX2
+stix2.directory.explode-contains_refs,STIX2: Directory to Contains,maltego.STIX2.directory,STIX2
+stix2.domain-name.explode-resolves_to_refs,STIX2: Domain Name to Resolves,maltego.STIX2.domain-name,STIX2
+stix2.email-addr.explode-belongs_to_ref,STIX2: Email Address to Belongs,maltego.STIX2.email-addr,STIX2
+stix2.email-message.explode-from_ref,STIX2: Email Message to From,maltego.STIX2.email-message,STIX2
+stix2.email-message.explode-sender_ref,STIX2: Email Message to Sender,maltego.STIX2.email-message,STIX2
+stix2.email-message.explode-to_refs,STIX2: Email Message to To,maltego.STIX2.email-message,STIX2
+stix2.email-message.explode-cc_refs,STIX2: Email Message to CC,maltego.STIX2.email-message,STIX2
+stix2.email-message.explode-bcc_refs,STIX2: Email Message to BCC,maltego.STIX2.email-message,STIX2
+stix2.email-message.explode-raw_email_ref,STIX2: Email Message to Raw email,maltego.STIX2.email-message,STIX2
+stix2.file.explode-parent_directory_ref,STIX2: File to Parent directory,maltego.STIX2.file,STIX2
+stix2.file.explode-contains_refs,STIX2: File to Contains,maltego.STIX2.file,STIX2
+stix2.file.explode-content_ref,STIX2: File to Content,maltego.STIX2.file,STIX2
+stix2.ipv4-addr.explode-resolves_to_refs,STIX2: IPv4 Address to Resolves,maltego.STIX2.ipv4-addr,STIX2
+stix2.ipv4-addr.explode-belongs_to_refs,STIX2: IPv4 Address to Belongs,maltego.STIX2.ipv4-addr,STIX2
+stix2.ipv6-addr.explode-resolves_to_refs,STIX2: IPv6 Address to Resolves,maltego.STIX2.ipv6-addr,STIX2
+stix2.ipv6-addr.explode-belongs_to_refs,STIX2: IPv6 Address to Belongs,maltego.STIX2.ipv6-addr,STIX2
+stix2.network-traffic.explode-src_ref,STIX2: Network Traffic to Src,maltego.STIX2.network-traffic,STIX2
+stix2.network-traffic.explode-dst_ref,STIX2: Network Traffic to Dst,maltego.STIX2.network-traffic,STIX2
+stix2.network-traffic.explode-src_payload_ref,STIX2: Network Traffic to Src payload,maltego.STIX2.network-traffic,STIX2
+stix2.network-traffic.explode-dst_payload_ref,STIX2: Network Traffic to Dst payload,maltego.STIX2.network-traffic,STIX2
+stix2.network-traffic.explode-encapsulates_refs,STIX2: Network Traffic to Encapsulates,maltego.STIX2.network-traffic,STIX2
+stix2.network-traffic.explode-encapsulated_by_ref,STIX2: Network Traffic to Encapsulated by,maltego.STIX2.network-traffic,STIX2
+stix2.process.explode-opened_connection_refs,STIX2: Process to Opened connections,maltego.STIX2.process,STIX2
+stix2.process.explode-creator_user_ref,STIX2: Process to Creator user,maltego.STIX2.process,STIX2
+stix2.process.explode-image_ref,STIX2: Process to Image,maltego.STIX2.process,STIX2
+stix2.process.explode-parent_ref,STIX2: Process to Parent,maltego.STIX2.process,STIX2
+stix2.process.explode-child_refs,STIX2: Process to Children,maltego.STIX2.process,STIX2
+stix2.windows-registry-key.explode-creator_user_ref,STIX2: Windows Registry Key to Creator user,maltego.STIX2.windows-registry-key,STIX2

@@ -12,20 +12,27 @@ mkdir mtz/EntityCategories/
 mkdir output/ 2> /dev/null
 
 echo "Add core entity"
-cp ./templates/STIX2.core.entity ./mtz/Entities/
+cp ./templates/maltego.STIX2.core.entity ./mtz/Entities/
 
 echo "Build Maltego Entities"
-python3 build-stix-entities.py
+if [ $# -eq 0 ] ;
+then
+	python3 build-stix-entities.py
+else
+	python3 build-stix-entities.py --with-opencti
+fi
 
 echo "Process icons"
-python3 build-icons.py
+if [ $# -eq 0 ] ;
+then
+	python3 build-icons.py
+else
+	python3 build-icons.py --with-opencti
+fi
 
 echo "Generate .mtz"
 cd mtz
 zip -q -x .empty -r ../output/entities.mtz ./Entities ./EntityCategories ./Icons
 cd ../
-
-echo "Copy entities.py in ./src/"
-cp ./output/entities.py ./src/
 
 echo "All done. MTZ packages can be imported in Maltego."

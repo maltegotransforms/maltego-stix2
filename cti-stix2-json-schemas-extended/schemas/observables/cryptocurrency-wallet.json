@@ -1,0 +1,34 @@
+{
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/cryptocurrency-wallet.json",
+  "$schema": "Custom",
+  "title": "x-opencti-cryptocurrency-wallet",
+  "description": "The Cryptocurrency Wallet represents a numeric address to receive cryptocurrencies.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../cti-stix2-json-schemas/schemas/common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `x-opencti-cryptocurrency-wallet`.",
+          "enum": [
+            "x-opencti-cryptocurrency-wallet"
+          ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^x-opencti-cryptocurrency-wallet--"
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies the value of the cryptocurrency wallet."
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}

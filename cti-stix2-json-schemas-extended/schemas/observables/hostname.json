@@ -1,0 +1,43 @@
+{
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/hostname.json",
+  "$schema": "Custom",
+  "title": "x-opencti-hostname",
+  "description": "The Host Name represents the properties of a fully qualified network domain name.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../cti-stix2-json-schemas/schemas/common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `x-opencti-hostname`.",
+          "enum": [
+            "x-opencti-hostname"
+          ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^x-opencti-hostname--"
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies the value of the host name.",
+          "format": "idn-hostname"
+        },
+        "resolves_to_refs": {
+          "type": "array",
+          "description": "Specifies a list of references to one or more IP addresses or domain names that the domain name resolves to.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}

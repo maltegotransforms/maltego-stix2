@@ -1,7 +1,13 @@
 *.pyc
 entities.mtz
-entities.py
 output/*
 mtz/*
-config.py
+trx/gunicorn/transforms/stix2*
+local_config.py
 .idea
+build/
+dist/
+maltego_stix2.egg-info/
+.eggs/
+__pycache__/
+*.DS_STORE

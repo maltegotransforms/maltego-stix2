@@ -1,0 +1,9 @@
+# Absolute path to the project.py folder
+local_execution_path = "/path/to/your/project/maltego-stix2/trx/gunicorn"
+
+# Absolute path to a python3 executable used to run transforms
+python_path = "/usr/bin/python3"
+
+# These values will be used to generate an importable CSV config for the iTDS. Local transform users can ignore these.
+trx_server_host = "https://localhost:443"
+itds_seed_name = "STIX2"
