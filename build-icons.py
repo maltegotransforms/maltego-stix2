@@ -1,32 +1,41 @@
-import os
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os, sys
 from PIL import Image
-from config import icons_config
+from maltego_stix2.config import _icons_config
 
-output_dir = "./mtz/Icons/STIX2"
 
-for icons in icons_config:
-    for dirName, subdirList, fileList in os.walk(icons["path"]):
-        for fname in fileList:
-            if icons["filter"] in fname:
-                image = Image.open(os.path.join(dirName, fname))
+def save_image(icon_path, size, out_path):
+    im = Image.open(icon_path)
+    im.thumbnail((size, size), Image.BICUBIC)
+    with open(out_path, "wb") as outfile:
+        im.save(outfile, "PNG")
+    im.close()
 
-                entity_name = "stix2_" + fname.split(icons["filter"])[0].replace(
-                    "-", "_"
-                )
-                for k, v in icons["replace"].items():
-                    entity_name = entity_name.replace(k, v)
 
-                new_image_96 = image.resize((96, 96))
-                new_image_96.save(os.path.join(output_dir, entity_name + "96.png"))
+def build(with_opencti=False):
+    output_dir = "./mtz/Icons/STIX2"
 
-                new_image_48 = image.resize((48, 48))
-                new_image_48.save(os.path.join(output_dir, entity_name + "48.png"))
+    for icons in _icons_config:
+        for dirName, subdirList, fileList in os.walk(icons["path"]):
+            for fname in fileList:
+                if icons["filter"] in fname:
+                    inpath = os.path.join(dirName, fname)
 
-                new_image_32 = image.resize((32, 32))
-                new_image_32.save(os.path.join(output_dir, entity_name + "32.png"))
+                    entity_name = "stix_two_" + fname.split(icons["filter"])[0].replace("-", "_")
+                    for k, v in icons["replace"].items():
+                        entity_name = entity_name.replace(k, v)
 
-                new_image_24 = image.resize((24, 24))
-                new_image_24.save(os.path.join(output_dir, entity_name + "24.png"))
+                    if not entity_name.startswith("x_opencti_") or with_opencti:
+                        save_image(inpath, 48, os.path.join(output_dir, entity_name + "48.png"))
+                        save_image(inpath, 32, os.path.join(output_dir, entity_name + "32.png"))
+                        save_image(inpath, 24, os.path.join(output_dir, entity_name + "24.png"))
+                        save_image(inpath, 16, os.path.join(output_dir, entity_name + ".png"))
 
-                new_image_16 = image.resize((16, 16))
-                new_image_16.save(os.path.join(output_dir, entity_name + ".png"))
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        build(with_opencti=True)
+    else:
+        build()

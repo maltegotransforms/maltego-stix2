@@ -10,7 +10,7 @@
     },
     {
       "properties": {
-        "aliases": {
+        "x_opencti_aliases": {
           "type": "array",
           "description": "Alternative names used to identify this identity.",
           "items": {

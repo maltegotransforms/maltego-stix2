@@ -1,0 +1,18 @@
+<MaltegoEntity id="maltego.STIX2.core" displayName="STIX2 Core" displayNamePlural="Core" description="Abstract entity from which all STIX entities inherit common properties" category="STIX 2 domain objects" smallIconResource="stix_two_default_icon" largeIconResource="stix_two_default_icon" allowedRoot="false" conversionOrder="2147483647" visible="true">
+   <Properties value="id" displayValue="id">
+      <Groups/>
+      <Fields>
+         <Field name="id" type="string" nullable="true" hidden="false" readonly="false" description=""/>
+         <Field name="x_maltego_marking_color" type="string" nullable="true" hidden="false" readonly="false" description="A color to be used in graphic display to show a marking sign (eg TLP)">
+            <SampleValue></SampleValue>
+         </Field>
+         <Field name="x_maltego_marking_text" type="string" nullable="true" hidden="false" readonly="false" description="A text to be used in graphic display to show a marking sign (eg TLP)">
+            <SampleValue></SampleValue>
+         </Field>
+      </Fields>
+   </Properties>
+   <Overlays>
+      <Overlay propertyName="x_maltego_marking_color" position="NW" type="colour"/>
+      <Overlay propertyName="x_maltego_marking_text" position="W" type="text"/>
+   </Overlays>
+</MaltegoEntity>

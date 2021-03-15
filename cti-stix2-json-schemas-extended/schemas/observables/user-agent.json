@@ -1,0 +1,34 @@
+{
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/user-agent.json",
+  "$schema": "Custom",
+  "title": "x-opencti-user-agent",
+  "description": "The User-Agent represents a string identifying a client application in a network connection.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../cti-stix2-json-schemas/schemas/common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `x-opencti-user-agent`.",
+          "enum": [
+            "x-opencti-user-agent"
+          ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^x-opencti-user-agent--"
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies the value of the user-agent."
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}

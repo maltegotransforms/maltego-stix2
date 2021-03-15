@@ -1,0 +1,34 @@
+{
+  "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/observables/text.json",
+  "$schema": "Custom",
+  "title": "x-opencti-text",
+  "description": "The Text represents any string.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "../../../cti-stix2-json-schemas/schemas/common/cyber-observable-core.json"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The value of this property MUST be `x-opencti-text`.",
+          "enum": [
+            "x-opencti-text"
+          ]
+        },
+        "id": {
+          "title": "id",
+          "pattern": "^x-opencti-text--"
+        },
+        "value": {
+          "type": "string",
+          "description": "Specifies the value of the text."
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}
