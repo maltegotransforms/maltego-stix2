@@ -107,43 +107,46 @@ def maltego_to_stix2(
     )
 
     obj_type: Type[_STIXBase] = get_stix_type(res_dict)
-    for prop_name, prop_def in obj_type._properties.items():
-        prop_value = res_dict.get(prop_name)
-        if not prop_value:
-            continue
+    if obj_type:
+        for prop_name, prop_def in obj_type._properties.items():
+            prop_value = res_dict.get(prop_name)
+            if not prop_value:
+                continue
 
-        # TODO try to validate whether stix will accept the property.
-        #  If not, try some recovery, if it fails, just delete the prop
-        valid = False
-        try:
-            prop_def.clean(res_dict[prop_name])
-            valid = True
-        except:
-            # TODO add more normalizers to recover
-            normalizer = normalizers.get(prop_def.__class__)
-            if normalizer:
-                try:
-                    res_dict[prop_name] = normalizer(prop_value)
-                    valid = True
-                except:
-                    pass
+            # TODO try to validate whether stix will accept the property.
+            #  If not, try some recovery, if it fails, just delete the prop
+            valid = False
+            try:
+                prop_def.clean(res_dict[prop_name])
+                valid = True
+            except:
+                # TODO add more normalizers to recover
+                normalizer = normalizers.get(prop_def.__class__)
+                if normalizer:
+                    try:
+                        res_dict[prop_name] = normalizer(prop_value)
+                        valid = True
+                    except:
+                        pass
 
-        if not valid:
-            if allow_custom_fields:
-                new_name = f"x_{prop_name}_unparseable"
-                if transform is not None:
-                    transform.addUIMessage(
-                        f"Warning: STIX2 conversion of property {prop_name} failed, it was added as {new_name} instead",
-                        "PartialError"
-                    )
-                res_dict[new_name] = prop_value
-            else:
-                if transform is not None:
-                    transform.addUIMessage(
-                        f"Warning: STIX2 conversion of property {prop_name} failed and it was removed from the output",
-                        "PartialError"
-                    )
-                del res_dict[prop_name]
+            if not valid:
+                if allow_custom_fields:
+                    new_name = f"x_{prop_name}_unparseable"
+                    if transform is not None:
+                        transform.addUIMessage(
+                            f"Warning: STIX2 conversion of property {prop_name} failed, it was added as {new_name} instead",
+                            "PartialError"
+                        )
+                    res_dict[new_name] = prop_value
+                else:
+                    if transform is not None:
+                        transform.addUIMessage(
+                            f"Warning: STIX2 conversion of property {prop_name} failed and it was removed from the output",
+                            "PartialError"
+                        )
+                    del res_dict[prop_name]
+    elif "id" not in res_dict:
+        res_dict["id"] = ""
 
     # Handle default values
     mapping = _heritage_config.get(stix2_type)
