@@ -176,6 +176,21 @@ def build(input_name, with_opencti=False):
         ) as o:
             o.write(set_output)
 
+        tds_set_data = {
+            "transformSetName": cset,
+            "transforms": "\n".join(
+                list(map(lambda r: '      <Transform name="paterva.v2.' + r.replace(".","").replace("-","").replace("_","") + '"/>', ctransforms))
+            ),
+        }
+        tds_set_output = set_template.format(**tds_set_data)
+        with open(
+                "./mtz/TransformSetsTDS/"
+                + cset.lower().replace(" ", "").replace(":", "")
+                + ".set",
+                "w",
+        ) as o:
+            o.write(tds_set_output)
+
     if itds_transforms_rows:
         with open("output/importable_itds_config.csv", "w") as outf:
             writer = csv.DictWriter(
