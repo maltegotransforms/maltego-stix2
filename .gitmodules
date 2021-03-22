@@ -1,7 +1,6 @@
 [submodule "cti-stix2-json-schemas"]
 	path = cti-stix2-json-schemas
 	url = https://github.com/oasis-open/cti-stix2-json-schemas
-	branch = 2.1-extensions
 [submodule "stix2-graphics"]
 	path = stix2-graphics
 	url = https://github.com/freetaxii/stix2-graphics
