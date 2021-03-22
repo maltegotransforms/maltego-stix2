@@ -106,9 +106,9 @@ _heritage_config = {
     ),
     "domain-name": _MaltegoEntityMapping("maltego.Domain", {"value": "fqdn"}),
     "directory": _MaltegoEntityMapping(None, icon_override="stix_two_default_icon"),
-    "file": _MaltegoEntityMapping(
-        "maltego.File", {"path": "source", "name": "description"}, icon_override="stix_two_default_icon"  # was: Binary
-    ),
+    "file": _MaltegoEntityMapping(None, icon_override="stix_two_default_icon"),
+    #    "maltego.File", {"path": "source", "name": "description"}, icon_override="stix_two_default_icon"  # was: Binary
+    # ),
     "email-addr": _MaltegoEntityMapping("maltego.EmailAddress", {"value": "email"}),
     "email-message": _MaltegoEntityMapping(
         "maltego.ConversationEmail",
