@@ -57,7 +57,6 @@ _icons_config = [
         "replace": {
             "coa": "course_of_action",
             "http": "url",
-            "incident": "x_opencti_incident",
             **digits
         },
     },
@@ -162,7 +161,7 @@ _heritage_config = {
         "maltego.IPv6Address", {"value": "ipv6-address"}
     ),
     "x-opencti-hostname": _MaltegoEntityMapping("maltego.DNSName", {"value": "fqdn"}, icon_override="stix_two_default_icon"),
-    "x-opencti-incident": _MaltegoEntityMapping("maltego.Incident", {"name": "title"}),
+    "incident": _MaltegoEntityMapping("maltego.Incident", {"name": "title"}),
     "campaign": _MaltegoEntityMapping(
         "maltego.Event",
         {

@@ -99,4 +99,3 @@ This module is not a huge project with an intense roadmap. Feel free to contribu
 
 - Rely on external library to parse JSON-ref files
 - Add missing icons for some observables
-- Add compatibility with Incident entity added in official STIX2 schemas

@@ -1,34 +1,15 @@
 {
   "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/sdos/incident.json",
-  "$schema": "Custom",
-  "title": "x-opencti-incident",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "incident",
   "description": "An incident is a grouping of adversary behavior that describes a set of malicious activities or attacks that occur over a period of time against a specific set of targets.",
   "type": "object",
   "allOf": [
     {
-      "$ref": "../../../cti-stix2-json-schemas/schemas/common/core.json"
+      "$ref": "../../../cti-stix2-json-schemas/schemas/sdos/incident.json"
     },
     {
       "properties": {
-        "type": {
-          "type": "string",
-          "description": "The type of this object, which MUST be the literal `incident`.",
-          "enum": [
-            "x-opencti-incident"
-          ]
-        },
-        "id": {
-          "title": "id",
-          "pattern": "^x-opencti-incident--"
-        },
-        "name": {
-          "type": "string",
-          "description": "The name used to identify the Incident."
-        },
-        "description": {
-          "type": "string",
-          "description": "A description that provides more details and context about the Incident, potentially including its purpose and its key characteristics."
-        },
         "aliases": {
           "type": "array",
           "description": "Alternative names used to identify this incident.",

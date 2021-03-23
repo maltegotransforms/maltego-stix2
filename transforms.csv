@@ -5,7 +5,7 @@ stix2.intrusion-set.explode-aliases,STIX2: Intrusion Set to Aliases,maltego.STIX
 stix2.campaign.explode-aliases,STIX2: Campaign to Aliases,maltego.STIX2.campaign,STIX2
 stix2.malware.explode-aliases,STIX2: Malware to Aliases,maltego.STIX2.malware,STIX2
 stix2.infrastructure.explode-aliases,STIX2: Infrastructure to Aliases,maltego.STIX2.infrastructure,STIX2
-stix2.x-opencti-incident.explode-aliases,STIX2: Incident to Aliases,maltego.STIX2.x-opencti-incident,STIX2
+stix2.incident.explode-aliases,STIX2: Incident to Aliases,maltego.STIX2.incident,STIX2
 stix2.attack-pattern.explode-aliases,STIX2: Attack Pattern to Aliases,maltego.STIX2.attack-pattern,STIX2
 stix2.tool.explode-aliases,STIX2: Tool to Aliases,maltego.STIX2.tool,STIX2
 stix2.report.explode-created_by_ref,STIX2: Report to Creator,maltego.STIX2.report,STIX2
@@ -28,7 +28,7 @@ stix2.grouping.explode-created_by_ref,STIX2: Grouping to Creator,maltego.STIX2.g
 stix2.course-of-action.explode-created_by_ref,STIX2: Course Of Action to Creator,maltego.STIX2.course-of-action,STIX2
 stix2.sighting.explode-created_by_ref,STIX2: Sighting to Creator,maltego.STIX2.sighting,STIX2
 stix2.relationship.explode-created_by_ref,STIX2: Relationship to Creator,maltego.STIX2.relationship,STIX2
-stix2.x-opencti-incident.explode-created_by_ref,STIX2: Incident to Creator,maltego.STIX2.x-opencti-incident,STIX2
+stix2.incident.explode-created_by_ref,STIX2: Incident to Creator,maltego.STIX2.incident,STIX2
 stix2.file.explode-hashes,STIX2: File to Hashes,maltego.STIX2.file,STIX2
 stix2.report.explode-labels,STIX2: Report to Labels,maltego.STIX2.report,STIX2
 stix2.vulnerability.explode-labels,STIX2: Vulnerability to Labels,maltego.STIX2.vulnerability,STIX2
@@ -50,7 +50,7 @@ stix2.grouping.explode-labels,STIX2: Grouping to Labels,maltego.STIX2.grouping,S
 stix2.course-of-action.explode-labels,STIX2: Course Of Action to Labels,maltego.STIX2.course-of-action,STIX2
 stix2.sighting.explode-labels,STIX2: Sighting to Labels,maltego.STIX2.sighting,STIX2
 stix2.relationship.explode-labels,STIX2: Relationship to Labels,maltego.STIX2.relationship,STIX2
-stix2.x-opencti-incident.explode-labels,STIX2: Incident to Labels,maltego.STIX2.x-opencti-incident,STIX2
+stix2.incident.explode-labels,STIX2: Incident to Labels,maltego.STIX2.incident,STIX2
 stix2.grouping.explode-object_refs,STIX2: Grouping to Objects,maltego.STIX2.grouping,STIX2
 stix2.note.explode-object_refs,STIX2: Note to Objects,maltego.STIX2.note,STIX2
 stix2.observed-data.explode-object_refs,STIX2: Observed data to Objects,maltego.STIX2.observed-data,STIX2
