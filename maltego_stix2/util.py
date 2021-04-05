@@ -176,6 +176,7 @@ def maltego_to_stix2(
 
     except PropertyPresenceError as e:
         reason = f"Property presence error ({e.__class__}): {', '.join(e.args)}"
+        reason = reason.replace("<", "").replace(">,", "")
     except ObjectConfigurationError as e:
         if hasattr(e, "reason"):
             reason = f"Object configuration error: {e.reason}"

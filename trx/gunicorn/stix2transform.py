@@ -43,7 +43,7 @@ def stix2_transform(transformName, entityType, client_msg: MaltegoMsg, response)
             transform=response,
             allow_custom_types=True,
             allow_custom_fields=True,
-            allow_skipping_stix2_coercion=False
+            allow_skipping_stix2_coercion=True
         )
         property_name = transformName.split("-")[1]
         entity_type = Phrase
