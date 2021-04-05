@@ -25,3 +25,7 @@ Fix on the Maltego File entity inheritance.
 ## Version 2.1 (23/03/2021)
 
 Use the new Incident STIX2 entity instead of the custom OpenCTI one.
+
+### Version 2.1.1 (05/04/2021)
+
+Fix minor issues
