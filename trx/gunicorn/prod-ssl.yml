@@ -2,6 +2,6 @@ version: '3'
 services:
   python:
     build: .
-    command: "gunicorn --certfile=server.crt --keyfile=server.key --bind=0.0.0.0:8443 --threads=25 --workers=2 project:app"
+    command: "gunicorn --certfile=server.crt --keyfile=server.key --workers=1 -k gevent project:app"
     ports:
        - "8443:8443"
