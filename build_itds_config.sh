@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Clear old results"
+rm output/itds-config.mtz 2> /dev/null
 
 echo "Create iTDS MTZ package"
 # this renaming shuffle is needed while the pTDS does not yet accept "." and "-" in transform names
