@@ -194,7 +194,7 @@ def build(input_name, with_opencti=False):
     if itds_transforms_rows:
         with open("output/importable_itds_config.csv", "w") as outf:
             writer = csv.DictWriter(
-                outf, fieldnames=list(itds_transforms_rows[0].keys()), delimiter=";", quoting=csv.QUOTE_ALL
+                outf, fieldnames=list(itds_transforms_rows[0].keys()), delimiter=",", quoting=csv.QUOTE_ALL
             )
             writer.writeheader()
             for data in itds_transforms_rows:
