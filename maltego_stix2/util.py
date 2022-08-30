@@ -4,7 +4,8 @@ import dateutil.parser, json
 from maltego_trx.maltego import MaltegoMsg, MaltegoTransform, MaltegoEntity
 from stix2.base import _STIXBase
 from stix2.exceptions import MissingPropertiesError, PropertyPresenceError, ObjectConfigurationError
-from stix2.parsing import dict_to_stix2, _detect_spec_version, STIX2_OBJ_MAPS
+from stix2.parsing import dict_to_stix2, detect_spec_version
+from stix2.registry import STIX2_OBJ_MAPS
 from stix2.properties import TimestampProperty
 
 from maltego_stix2.config import (
@@ -14,7 +15,7 @@ from maltego_stix2.config import (
 )
 
 def get_stix_type(stix_dict):
-    v = _detect_spec_version(stix_dict)
+    v = detect_spec_version(stix_dict)
     OBJ_MAP = dict(STIX2_OBJ_MAPS[v]['objects'], **STIX2_OBJ_MAPS[v]['observables'])
     return OBJ_MAP.get(stix_dict['type'])
 
