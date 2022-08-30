@@ -8,7 +8,7 @@ from maltego_stix2.config import _icons_config
 
 def save_image(icon_path, size, out_path):
     im = Image.open(icon_path)
-    im.thumbnail((size, size), Image.BICUBIC)
+    im.thumbnail((size, size), Image.Resampling.BICUBIC)
     with open(out_path, "wb") as outfile:
         im.save(outfile, "PNG")
     im.close()

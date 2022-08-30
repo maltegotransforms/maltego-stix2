@@ -33,7 +33,7 @@ If you want to build your own transforms using these entities, you can install t
 ## Generation
 
 ```
-$ git clone https://github.com/amr-cossi/maltego-stix2
+$ git clone https://github.com/maltegotransforms/maltego-stix2
 $ cd maltego-stix2
 $ git submodule init
 ```
