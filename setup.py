@@ -1,18 +1,19 @@
 from setuptools import setup
+from maltego_stix2 import VERSION
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 dependencies = [
     'Pillow==9.2.0',
-    'maltego-trx==1.3.8',
+    'maltego-trx==1.6.0',
     'stix2==3.0.1',
     'python-dateutil==2.8.1'
 ]
 
 setup(
     name='maltego-stix2',
-    version="2.1.4",
+    version=VERSION,
     description='Helper utilities for building Maltego transforms that consume or produce data in STIX2 format.',
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -29,3 +29,7 @@ Use the new Incident STIX2 entity instead of the custom OpenCTI one.
 ### Version 2.1.1 (05/04/2021)
 
 Fix minor issues
+
+### Version 2.1.5 (10/10/2022)
+
+* Bugfix - missing version bug
